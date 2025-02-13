@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtLogUsername = new TextBox();
+            txtLogPassword = new TextBox();
             buttonLogin = new Button();
             buttonRegister = new Button();
             labelUsername = new Label();
@@ -38,21 +38,21 @@
             labelWelcome = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // txtLogUsername
             // 
-            textBox1.Location = new Point(228, 80);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 40);
-            textBox1.TabIndex = 0;
+            txtLogUsername.Location = new Point(228, 80);
+            txtLogUsername.Margin = new Padding(4);
+            txtLogUsername.Name = "txtLogUsername";
+            txtLogUsername.Size = new Size(287, 40);
+            txtLogUsername.TabIndex = 0;
             // 
-            // textBox2
+            // txtLogPassword
             // 
-            textBox2.Location = new Point(228, 149);
-            textBox2.Margin = new Padding(4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(287, 40);
-            textBox2.TabIndex = 1;
+            txtLogPassword.Location = new Point(228, 149);
+            txtLogPassword.Margin = new Padding(4);
+            txtLogPassword.Name = "txtLogPassword";
+            txtLogPassword.Size = new Size(287, 40);
+            txtLogPassword.TabIndex = 1;
             // 
             // buttonLogin
             // 
@@ -125,8 +125,8 @@
             Controls.Add(labelUsername);
             Controls.Add(buttonRegister);
             Controls.Add(buttonLogin);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtLogPassword);
+            Controls.Add(txtLogUsername);
             Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             Name = "LoginForm";
@@ -137,8 +137,8 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtLogUsername;
+        private TextBox txtLogPassword;
         private Button buttonLogin;
         private Button buttonRegister;
         private Label labelUsername;

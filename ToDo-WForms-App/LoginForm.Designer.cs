@@ -30,81 +30,105 @@
         {
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            buttonLogin = new Button();
+            buttonRegister = new Button();
+            labelUsername = new Label();
+            labelPassword = new Label();
+            labelRegister = new Label();
+            labelWelcome = new Label();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(259, 80);
-            textBox1.Margin = new Padding(4, 4, 4, 4);
+            textBox1.Location = new Point(228, 80);
+            textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 40);
+            textBox1.Size = new Size(287, 40);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(259, 149);
-            textBox2.Margin = new Padding(4, 4, 4, 4);
+            textBox2.Location = new Point(228, 149);
+            textBox2.Margin = new Padding(4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(223, 40);
+            textBox2.Size = new Size(287, 40);
             textBox2.TabIndex = 1;
             // 
-            // button1
+            // buttonLogin
             // 
-            button1.Location = new Point(259, 223);
-            button1.Margin = new Padding(4, 4, 4, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(168, 45);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            buttonLogin.ImageAlign = ContentAlignment.MiddleRight;
+            buttonLogin.Location = new Point(300, 215);
+            buttonLogin.Margin = new Padding(4);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(168, 45);
+            buttonLogin.TabIndex = 2;
+            buttonLogin.Text = "Login";
+            buttonLogin.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonRegister
             // 
-            button2.Location = new Point(259, 295);
-            button2.Margin = new Padding(4, 4, 4, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(168, 45);
-            button2.TabIndex = 3;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            buttonRegister.Location = new Point(300, 286);
+            buttonRegister.Margin = new Padding(4);
+            buttonRegister.Name = "buttonRegister";
+            buttonRegister.Size = new Size(168, 45);
+            buttonRegister.TabIndex = 3;
+            buttonRegister.Text = "Register";
+            buttonRegister.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelUsername
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(55, 80);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 33);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
+            labelUsername.AutoSize = true;
+            labelUsername.Location = new Point(29, 80);
+            labelUsername.Margin = new Padding(4, 0, 4, 0);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new Size(191, 33);
+            labelUsername.TabIndex = 4;
+            labelUsername.Text = "Enter Username";
             // 
-            // label2
+            // labelPassword
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(55, 152);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 33);
-            label2.TabIndex = 5;
-            label2.Text = "label2";
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(29, 156);
+            labelPassword.Margin = new Padding(4, 0, 4, 0);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(188, 33);
+            labelPassword.TabIndex = 5;
+            labelPassword.Text = "Enter Password";
+            // 
+            // labelRegister
+            // 
+            labelRegister.AutoSize = true;
+            labelRegister.Location = new Point(29, 292);
+            labelRegister.Name = "labelRegister";
+            labelRegister.Size = new Size(256, 33);
+            labelRegister.TabIndex = 6;
+            labelRegister.Text = "Do Not Have Accout?";
+            // 
+            // labelWelcome
+            // 
+            labelWelcome.AutoSize = true;
+            labelWelcome.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelWelcome.Location = new Point(53, 18);
+            labelWelcome.Name = "labelWelcome";
+            labelWelcome.Size = new Size(420, 36);
+            labelWelcome.TabIndex = 7;
+            labelWelcome.Text = "Welcome To Your To-Do App!";
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(633, 413);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(537, 371);
+            Controls.Add(labelWelcome);
+            Controls.Add(labelRegister);
+            Controls.Add(labelPassword);
+            Controls.Add(labelUsername);
+            Controls.Add(buttonRegister);
+            Controls.Add(buttonLogin);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "LoginForm";
             Text = "Login";
             ResumeLayout(false);
@@ -115,9 +139,11 @@
 
         private TextBox textBox1;
         private TextBox textBox2;
-        private Button button1;
-        private Button button2;
-        private Label label1;
-        private Label label2;
+        private Button buttonLogin;
+        private Button buttonRegister;
+        private Label labelUsername;
+        private Label labelPassword;
+        private Label labelRegister;
+        private Label labelWelcome;
     }
 }

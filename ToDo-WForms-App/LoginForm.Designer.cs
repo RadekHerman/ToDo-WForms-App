@@ -74,6 +74,7 @@
             btnOpenRegisterForm.TabIndex = 3;
             btnOpenRegisterForm.Text = "Register";
             btnOpenRegisterForm.UseVisualStyleBackColor = true;
+            btnOpenRegisterForm.Click += btnOpenRegisterForm_Click;
             // 
             // lblLoginUsername
             // 

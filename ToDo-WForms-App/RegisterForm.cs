@@ -16,5 +16,11 @@ namespace ToDo_WForms_App
         {
             InitializeComponent();
         }
+
+        private void btnOpenLoginForm_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

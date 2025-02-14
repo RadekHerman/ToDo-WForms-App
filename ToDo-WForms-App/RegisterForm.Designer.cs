@@ -105,6 +105,7 @@
             btnOpenLoginForm.TabIndex = 7;
             btnOpenLoginForm.Text = "Login";
             btnOpenLoginForm.UseVisualStyleBackColor = true;
+            btnOpenLoginForm.Click += btnOpenLoginForm_Click;
             // 
             // lblHaveAccount
             // 
@@ -141,7 +142,7 @@
             Controls.Add(lblRegPassword);
             Controls.Add(lblRegUsername);
             Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "RegisterForm";
             Text = "Registration";
             ResumeLayout(false);

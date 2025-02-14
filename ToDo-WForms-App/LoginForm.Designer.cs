@@ -42,16 +42,18 @@
             // 
             txtLogUsername.Location = new Point(228, 80);
             txtLogUsername.Margin = new Padding(4);
+            txtLogUsername.MaxLength = 20;
             txtLogUsername.Name = "txtLogUsername";
-            txtLogUsername.Size = new Size(287, 40);
+            txtLogUsername.Size = new Size(287, 34);
             txtLogUsername.TabIndex = 0;
             // 
             // txtLogPassword
             // 
             txtLogPassword.Location = new Point(228, 149);
             txtLogPassword.Margin = new Padding(4);
+            txtLogPassword.MaxLength = 20;
             txtLogPassword.Name = "txtLogPassword";
-            txtLogPassword.Size = new Size(287, 40);
+            txtLogPassword.Size = new Size(287, 34);
             txtLogPassword.TabIndex = 1;
             // 
             // btnLogin
@@ -82,7 +84,7 @@
             lblLoginUsername.Location = new Point(29, 80);
             lblLoginUsername.Margin = new Padding(4, 0, 4, 0);
             lblLoginUsername.Name = "lblLoginUsername";
-            lblLoginUsername.Size = new Size(191, 33);
+            lblLoginUsername.Size = new Size(167, 27);
             lblLoginUsername.TabIndex = 4;
             lblLoginUsername.Text = "Enter Username";
             // 
@@ -92,7 +94,7 @@
             lblLoginPassword.Location = new Point(29, 156);
             lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
             lblLoginPassword.Name = "lblLoginPassword";
-            lblLoginPassword.Size = new Size(188, 33);
+            lblLoginPassword.Size = new Size(163, 27);
             lblLoginPassword.TabIndex = 5;
             lblLoginPassword.Text = "Enter Password";
             // 
@@ -101,7 +103,7 @@
             lblRegister.AutoSize = true;
             lblRegister.Location = new Point(29, 292);
             lblRegister.Name = "lblRegister";
-            lblRegister.Size = new Size(256, 33);
+            lblRegister.Size = new Size(225, 27);
             lblRegister.TabIndex = 6;
             lblRegister.Text = "Do Not Have Accout?";
             // 
@@ -111,13 +113,13 @@
             lblLoginWelcome.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLoginWelcome.Location = new Point(53, 18);
             lblLoginWelcome.Name = "lblLoginWelcome";
-            lblLoginWelcome.Size = new Size(420, 36);
+            lblLoginWelcome.Size = new Size(366, 31);
             lblLoginWelcome.TabIndex = 7;
             lblLoginWelcome.Text = "Welcome To Your To-Do App!";
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 33F);
+            AutoScaleDimensions = new SizeF(13F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(537, 371);
             Controls.Add(lblLoginWelcome);

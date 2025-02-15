@@ -24,7 +24,30 @@ namespace ToDo_WForms_App
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            //Application.Run(new ToDoMainForm());
+
+            bool loginSuccessful = false;
+            LoginForm loginForm;
+
+            while (!loginSuccessful)
+            {
+                loginForm = new LoginForm();
+
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    loginSuccessful = true;
+                    Application.Run(new ToDoMainForm());
+                }
+                else if (loginForm.DialogResult == DialogResult.Cancel)
+                {
+                    Application.Exit();
+                    return;  // Exit the method and the application
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

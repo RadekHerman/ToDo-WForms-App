@@ -21,13 +21,20 @@ namespace ToDo_WForms_App
 
         private void btnOpenRegisterForm_Click(object sender, EventArgs e)
         {
-            RegisterForm form2 = new RegisterForm();
+            RegisterForm registerForm = new RegisterForm();
             this.Hide();
-            if (form2.ShowDialog() == DialogResult.OK)
+            if (registerForm.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
             }
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.Retry;
+            this.Close();
         }
     }
 }

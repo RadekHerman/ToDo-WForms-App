@@ -53,6 +53,7 @@
             txtLogPassword.Margin = new Padding(4);
             txtLogPassword.MaxLength = 20;
             txtLogPassword.Name = "txtLogPassword";
+            txtLogPassword.PasswordChar = '*';
             txtLogPassword.Size = new Size(287, 34);
             txtLogPassword.TabIndex = 1;
             // 

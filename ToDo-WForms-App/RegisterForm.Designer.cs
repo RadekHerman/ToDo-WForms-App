@@ -80,6 +80,7 @@
             txtRegPassword.Location = new Point(243, 119);
             txtRegPassword.MaxLength = 20;
             txtRegPassword.Name = "txtRegPassword";
+            txtRegPassword.PasswordChar = '*';
             txtRegPassword.Size = new Size(299, 34);
             txtRegPassword.TabIndex = 4;
             // 
@@ -88,6 +89,7 @@
             txtRegConfirmPass.Location = new Point(243, 182);
             txtRegConfirmPass.MaxLength = 20;
             txtRegConfirmPass.Name = "txtRegConfirmPass";
+            txtRegConfirmPass.PasswordChar = '*';
             txtRegConfirmPass.Size = new Size(299, 34);
             txtRegConfirmPass.TabIndex = 5;
             // 
@@ -99,6 +101,7 @@
             btnRegister.TabIndex = 6;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnOpenLoginForm
             // 

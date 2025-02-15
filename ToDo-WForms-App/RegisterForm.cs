@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,43 @@ namespace ToDo_WForms_App
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if ((!string.IsNullOrWhiteSpace(txtRegUsername.Text)) || (!string.IsNullOrWhiteSpace(txtRegPassword.Text)) || (!string.IsNullOrWhiteSpace(txtRegConfirmPass.Text)))
+            {
+                if (txtRegPassword.Text == txtRegConfirmPass.Text)
+                {
+                    if (createUser(txtRegUsername.Text))
+                    {
+                        MessageBox.Show("The Accout Has Been Created!");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry! Please change the username. The username already exist!");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("The Passwords Do Not Match!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid inputs!");
+            }
+        }
+
+        private bool createUser(string username)
+        {
+            //connect to database and check if username exist, if retrun false
+            // else add user to database
+           
+            return true;
         }
     }
 }

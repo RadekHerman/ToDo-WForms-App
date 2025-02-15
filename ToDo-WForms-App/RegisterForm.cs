@@ -40,7 +40,7 @@ namespace ToDo_WForms_App
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if ((!string.IsNullOrWhiteSpace(txtRegUsername.Text)) || (!string.IsNullOrWhiteSpace(txtRegPassword.Text)) || (!string.IsNullOrWhiteSpace(txtRegConfirmPass.Text)))
+            if ((!string.IsNullOrWhiteSpace(txtRegUsername.Text) && (txtRegUsername.Text.Length >= 3)) && (!string.IsNullOrWhiteSpace(txtRegPassword.Text) && txtRegPassword.Text.Length >= 3) && (!string.IsNullOrWhiteSpace(txtRegConfirmPass.Text)))
             {
                 if (txtRegPassword.Text == txtRegConfirmPass.Text)
                 {
@@ -54,7 +54,6 @@ namespace ToDo_WForms_App
                     {
                         MessageBox.Show("Sorry! Please change the username. The username already exist!");
                     }
-
                 }
                 else
                 {
@@ -63,7 +62,7 @@ namespace ToDo_WForms_App
             }
             else
             {
-                MessageBox.Show("Please enter valid inputs!");
+                MessageBox.Show("Please enter valid inputs, minimum 3 charcters!");
             }
         }
 

@@ -11,7 +11,7 @@ public class User
     public string Username { get; set; }
 
     [Required]
-    [StringLength(60)]
+    [StringLength(80)]
     public string Password { get; set; }
 
     //[Required]

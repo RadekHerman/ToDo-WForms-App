@@ -44,7 +44,7 @@ namespace ToDo_WForms_App
             {
                 if (txtRegPassword.Text == txtRegConfirmPass.Text)
                 {
-                    if (createUser(txtRegUsername.Text))
+                    if (createUser(txtRegUsername.Text, txtRegPassword.Text))
                     {
                         MessageBox.Show("The Accout Has Been Created!");
                         this.DialogResult = DialogResult.OK;
@@ -66,12 +66,31 @@ namespace ToDo_WForms_App
             }
         }
 
-        private bool createUser(string username)
+        private bool createUser(string username, string password)
         {
-            //connect to database and check if username exist, if retrun false
-            // else add user to database
-           
-            return true;
+
+            using (var context = new ToDoDbContext())
+            {
+                //var users = context.Users.ToList();
+                //bool userExists = users.Any(u => u.Username == username);
+                bool userExists = context.Users.Any(u => u.Username == username);
+
+                if (userExists) { return false; }
+                else
+                {
+                    string hashedPassword = PasswordHelper.HashPassword(password);
+                    var newUser = new User
+                    {
+                        Username = username,
+                        Password = hashedPassword
+                    };
+
+                    context.Users.Add(newUser);
+                    context.SaveChanges();
+                    return true;
+                }
+                
+            }
         }
     }
 }

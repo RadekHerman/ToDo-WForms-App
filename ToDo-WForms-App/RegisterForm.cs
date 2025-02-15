@@ -34,7 +34,7 @@
                 {
                     if (createUser(txtRegUsername.Text, txtRegPassword.Text))
                     {
-                        MessageBox.Show("The Accout Has Been Created!");
+                        MessageBox.Show("Your Account Has Been Created! Please Login!");
                         this.DialogResult = DialogResult.OK;
                         this.Close();
                     }

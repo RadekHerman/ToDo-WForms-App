@@ -1,6 +1,4 @@
-﻿using BCrypt.Net;
-
-namespace ToDo_WForms_App
+﻿namespace ToDo_WForms_App
 {
     public static class PasswordHelper
     {

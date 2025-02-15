@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Eventing.Reader;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-namespace ToDo_WForms_App
+﻿namespace ToDo_WForms_App
 {
     public partial class RegisterForm : Form
     {
@@ -89,7 +77,7 @@ namespace ToDo_WForms_App
                     context.SaveChanges();
                     return true;
                 }
-                
+
             }
         }
     }

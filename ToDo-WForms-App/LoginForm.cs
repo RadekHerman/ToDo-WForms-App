@@ -1,5 +1,3 @@
-using System.Drawing.Text;
-
 namespace ToDo_WForms_App
 {
     public partial class LoginForm : Form
@@ -35,7 +33,7 @@ namespace ToDo_WForms_App
         {
             if ((!string.IsNullOrWhiteSpace(txtLogUsername.Text)) && (!string.IsNullOrWhiteSpace(txtLogPassword.Text)))
             {
-                if (validateUser(txtLogUsername.Text, txtLogPassword.Text))
+                if (IsValidUser(txtLogUsername.Text, txtLogPassword.Text))
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -51,17 +49,20 @@ namespace ToDo_WForms_App
                 MessageBox.Show("Invalid data! Username and Password are required!");
             }
         }
-
-        private bool validateUser(string username, string password)
+        private bool IsValidUser(string username, string password)
         {
             using (var context = new ToDoDbContext())
             {
-                bool userExists = context.Users.Any(u => u.Username == username);
-                if (!userExists) { return false; }
-                else
-                {
-                    return true;
-                }
+                var hashedPassword = context.Users
+                    .Where(u => u.Username == username)
+                    .Select(u => u.Password)
+                    .FirstOrDefault();
+
+                if (hashedPassword == null)
+                    return false;
+
+                //return bool
+                return PasswordHelper.VerifyPassword(password, hashedPassword);
             }
         }
     }

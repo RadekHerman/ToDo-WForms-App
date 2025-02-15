@@ -1,10 +1,3 @@
-using System;
-using System.Data.Entity;
-using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
-
-
-
 namespace ToDo_WForms_App
 {
     internal static class Program

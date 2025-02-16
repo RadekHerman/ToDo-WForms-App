@@ -5,6 +5,8 @@
         public ToDoMainForm()
         {
             InitializeComponent();
+            int loggedInUserId = UserSession.UserId;
+            string loggedInUsername = UserSession.Username;
         }
     }
 }

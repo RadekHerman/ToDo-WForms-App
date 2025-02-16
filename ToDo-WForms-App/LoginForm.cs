@@ -1,3 +1,5 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace ToDo_WForms_App
 {
     public partial class LoginForm : Form
@@ -35,6 +37,18 @@ namespace ToDo_WForms_App
             {
                 if (IsValidUser(txtLogUsername.Text, txtLogPassword.Text))
                 {
+                    // set the logged-in user session id and username
+                    using (var context = new ToDoDbContext())
+                    {
+                        var user = context.Users
+                                          .FirstOrDefault(u => u.Username == txtLogUsername.Text);
+
+                        if (user != null)
+                        {
+                            UserSession.UserId = user.Id;
+                            UserSession.Username = user.Username;
+                        }
+                    }
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     MessageBox.Show("Login successful!");
@@ -49,6 +63,7 @@ namespace ToDo_WForms_App
                 MessageBox.Show("Invalid data! Username and Password are required!");
             }
         }
+       
         private bool IsValidUser(string username, string password)
         {
             using (var context = new ToDoDbContext())
@@ -65,5 +80,6 @@ namespace ToDo_WForms_App
                 return PasswordHelper.VerifyPassword(password, hashedPassword);
             }
         }
+
     }
 }

@@ -25,11 +25,11 @@ namespace ToDo_WForms_App
 
         private void LoadData()
         {
-            MessageBox.Show("LoadData method called", "Debug");
+            // MessageBox.Show("LoadData method called", "Debug");
 
             using (var context = new ToDoDbContext())
             {
-                MessageBox.Show("Database context initialized", "Debug");
+                // MessageBox.Show("Database context initialized", "Debug");
                 var posts = context.Posts
                     .Where(p => p.UserId == loggedInUserId)
                     .Select(p => new
@@ -45,11 +45,11 @@ namespace ToDo_WForms_App
 
                 if (posts.Count == 0)
                 {
-                    MessageBox.Show("No posts found for the current user.", "Debug");
+                    // MessageBox.Show("No posts found for the current user.", "Debug");
                 }
                 else
                 {
-                    MessageBox.Show($"Retrieved {posts.Count} posts for UserId: {loggedInUserId}", "Debug");
+                    //MessageBox.Show($"Retrieved {posts.Count} posts for UserId: {loggedInUserId}", "Debug");
                 }
 
                 dataGridView1.DataSource = posts;

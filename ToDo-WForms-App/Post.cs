@@ -14,7 +14,6 @@ public class Post
 
     public string Content { get; set; }
 
-    [Required]
     public DateTime DateTodo { get; set; }
 
     public TimeSpan? HourTodo { get; set; }

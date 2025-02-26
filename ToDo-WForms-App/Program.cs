@@ -8,6 +8,9 @@ namespace ToDo_WForms_App
         [STAThread]
         static void Main()
         {
+            System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("en-GB");
+            System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Globalization.CultureInfo("en-GB");
+
             // check if database exist if not create it
             using (var context = new ToDoDbContext())
             {

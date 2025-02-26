@@ -14,6 +14,7 @@ namespace ToDo_WForms_App
             InitializeComponent();
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
+            lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your Tasks!";
             MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
         }
 

@@ -12,7 +12,6 @@ namespace ToDo_WForms_App
         public ToDoMainForm()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = true;
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
             MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
@@ -53,10 +52,13 @@ namespace ToDo_WForms_App
                 }
 
                 dataGridView1.DataSource = posts;
+
+                dataGridView1.Columns["DateCreated"].HeaderText = "Data utworzenia";
+                dataGridView1.Columns["Subject"].HeaderText = "Temat";
+                dataGridView1.Columns["Content"].HeaderText = "Opis";
+                dataGridView1.Columns["DateTodo"].HeaderText = "Data wydarzenia";
+                dataGridView1.Columns["HourTodo"].HeaderText = "Godzina wydarzenia";
             }
-
         }
-
-
     }
 }

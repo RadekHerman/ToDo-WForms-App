@@ -40,21 +40,20 @@
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 45);
-            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Location = new Point(41, 63);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(465, 179);
+            dataGridView1.Size = new Size(823, 323);
             dataGridView1.TabIndex = 0;
             // 
             // ToDoMainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 270);
+            ClientSize = new Size(959, 451);
             Controls.Add(dataGridView1);
-            Margin = new Padding(2);
+            Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
             Name = "ToDoMainForm";
             Text = "ToDoMainForm";
             Load += ToDoMainForm_Load;

@@ -14,7 +14,7 @@ namespace ToDo_WForms_App
             InitializeComponent();
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
-            lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your Tasks!";
+            lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your tasks!";
             MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
             dateInsert.Format = DateTimePickerFormat.Custom;
             dateInsert.CustomFormat = "dd/MM/yyyy";
@@ -25,7 +25,9 @@ namespace ToDo_WForms_App
         private void ToDoMainForm_Load(object sender, EventArgs e)
         {
             LoadData();
+            AddEditAndDeleteButtons();
         }
+
 
         private void LoadData()
         {
@@ -38,6 +40,7 @@ namespace ToDo_WForms_App
                     .Where(p => p.UserId == loggedInUserId)
                     .Select(p => new
                     {
+                        p.Id,
                         p.DateCreated,
                         p.Subject,
                         p.Content,
@@ -59,8 +62,10 @@ namespace ToDo_WForms_App
                 }
 
                 dataGridView1.DataSource = posts;
+                dataGridView1.Columns["Id"].Visible = false;
                 FormatDataGridView();
 
+                // reset values
                 dataGridView1.Columns["DateCreated"].HeaderText = "Data utworzenia";
                 dataGridView1.Columns["Subject"].HeaderText = "Temat";
                 dataGridView1.Columns["Content"].HeaderText = "Opis";
@@ -73,6 +78,7 @@ namespace ToDo_WForms_App
         {
             dataGridView1.Columns["HourTodo"].DefaultCellStyle.Format = @"HH:mm";
             dataGridView1.Columns["DateTodo"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dataGridView1.Columns["Content"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
@@ -110,5 +116,107 @@ namespace ToDo_WForms_App
                 timeInsert.Value = DateTime.Now;
             }
         }
+
+        // add edit and delete buttons / columns
+
+        private void AddEditAndDeleteButtons()
+        {
+            // Add Edit button column
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn
+            {
+                Name = "EditButton",
+                HeaderText = "Edit Task",
+                Text = "Edit",
+                UseColumnTextForButtonValue = true
+            };
+            dataGridView1.Columns.Add(editButtonColumn);
+
+            // Add Delete button column
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
+            {
+                Name = "DeleteButton",
+                HeaderText = "Delete Task",
+                Text = "Delete",
+                UseColumnTextForButtonValue = true
+            };
+            dataGridView1.Columns.Add(deleteButtonColumn);
+        }
+
+        private void EditPost(int postId)
+        {
+            // Retrieve the post to edit
+            using (var context = new ToDoDbContext())
+            {
+                var post = context.Posts.FirstOrDefault(p => p.Id == postId);
+
+                if (post == null)
+                {
+                    MessageBox.Show("Post not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Open a new form or show a dialog to edit the post
+                using (var editForm = new EditPostForm(post)) // Create and pass the post to the form
+                {
+                    if (editForm.ShowDialog() == DialogResult.OK)
+                    {
+                        // Save changes back to the database
+                        context.SaveChanges();
+                        LoadData(); // Reload data
+                    }
+                }
+            }
+        }
+
+        private void DeletePost(int postId)
+        {
+            using (var context = new ToDoDbContext())
+            {
+                var post = context.Posts.FirstOrDefault(p => p.Id == postId);
+
+                if (post == null)
+                {
+                    MessageBox.Show("Post not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Delete the post
+                context.Posts.Remove(post);
+                context.SaveChanges();
+
+                MessageBox.Show("Post deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ensure the click is not on the header row or an out-of-bounds index
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+
+            // Check if the clicked column is the "Edit" button column
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "EditButton")
+            {
+                // Retrieve the post ID of the selected row
+                int postId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+                // Call your method to edit the post
+                EditPost(postId);
+            }
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "DeleteButton")
+            {
+                // Retrieve the post ID of the selected row
+                int postId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+                // Confirm and delete the post
+                if (MessageBox.Show("Are you sure you want to delete this post?", "Confirm Delete",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    DeletePost(postId);
+                    LoadData(); // Reload data after deletion
+                }
+            }
+        }
+
     }
 }

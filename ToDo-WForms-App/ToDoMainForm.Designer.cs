@@ -50,11 +50,11 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 157);
+            dataGridView1.Location = new Point(44, 168);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1032, 282);
+            dataGridView1.Size = new Size(1029, 340);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellClick;
             // 
@@ -64,7 +64,7 @@
             lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 238);
             lblWelcome.Location = new Point(44, 10);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(112, 33);
+            lblWelcome.Size = new Size(76, 21);
             lblWelcome.TabIndex = 1;
             lblWelcome.Text = "Welcome";
             // 
@@ -86,32 +86,32 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.Location = new Point(137, 69);
             label1.Name = "label1";
-            label1.Size = new Size(745, 26);
+            label1.Size = new Size(490, 19);
             label1.TabIndex = 3;
             label1.Text = "Fill out the boxes and press the \"Add Task\" button to create a new task.";
             // 
             // txtSubjectInsert
             // 
-            txtSubjectInsert.Location = new Point(137, 111);
+            txtSubjectInsert.Location = new Point(137, 117);
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
-            txtSubjectInsert.Size = new Size(265, 40);
+            txtSubjectInsert.Size = new Size(265, 29);
             txtSubjectInsert.TabIndex = 4;
             // 
             // txtContentInsert
             // 
-            txtContentInsert.Location = new Point(408, 114);
+            txtContentInsert.Location = new Point(408, 117);
             txtContentInsert.Name = "txtContentInsert";
             txtContentInsert.PlaceholderText = "Details";
-            txtContentInsert.Size = new Size(347, 40);
+            txtContentInsert.Size = new Size(347, 29);
             txtContentInsert.TabIndex = 4;
             // 
             // dateInsert
             // 
             dateInsert.Format = DateTimePickerFormat.Short;
-            dateInsert.Location = new Point(761, 114);
+            dateInsert.Location = new Point(761, 117);
             dateInsert.Name = "dateInsert";
-            dateInsert.Size = new Size(183, 40);
+            dateInsert.Size = new Size(183, 29);
             dateInsert.TabIndex = 5;
             // 
             // sqliteCommand1
@@ -124,17 +124,17 @@
             // timeInsert
             // 
             timeInsert.Format = DateTimePickerFormat.Time;
-            timeInsert.Location = new Point(964, 114);
+            timeInsert.Location = new Point(950, 117);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
-            timeInsert.Size = new Size(99, 40);
+            timeInsert.Size = new Size(99, 29);
             timeInsert.TabIndex = 5;
             // 
             // ToDoMainForm
             // 
-            AutoScaleDimensions = new SizeF(16F, 33F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1168, 451);
+            ClientSize = new Size(1165, 520);
             Controls.Add(timeInsert);
             Controls.Add(dateInsert);
             Controls.Add(txtContentInsert);

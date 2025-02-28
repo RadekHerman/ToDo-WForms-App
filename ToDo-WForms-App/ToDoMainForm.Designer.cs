@@ -33,10 +33,11 @@
             btnAddTask = new Button();
             label1 = new Label();
             txtSubjectInsert = new TextBox();
-            txtContentInsert = new TextBox();
             dateInsert = new DateTimePicker();
             sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
             timeInsert = new DateTimePicker();
+            txtContentInsert = new TextBox();
+            btnClearData = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -92,24 +93,16 @@
             // 
             // txtSubjectInsert
             // 
-            txtSubjectInsert.Location = new Point(137, 117);
+            txtSubjectInsert.Location = new Point(137, 111);
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
             txtSubjectInsert.Size = new Size(265, 40);
             txtSubjectInsert.TabIndex = 4;
             // 
-            // txtContentInsert
-            // 
-            txtContentInsert.Location = new Point(408, 117);
-            txtContentInsert.Name = "txtContentInsert";
-            txtContentInsert.PlaceholderText = "Details";
-            txtContentInsert.Size = new Size(347, 40);
-            txtContentInsert.TabIndex = 4;
-            // 
             // dateInsert
             // 
             dateInsert.Format = DateTimePickerFormat.Short;
-            dateInsert.Location = new Point(761, 117);
+            dateInsert.Location = new Point(778, 111);
             dateInsert.Name = "dateInsert";
             dateInsert.Size = new Size(183, 40);
             dateInsert.TabIndex = 5;
@@ -124,20 +117,41 @@
             // timeInsert
             // 
             timeInsert.Format = DateTimePickerFormat.Time;
-            timeInsert.Location = new Point(950, 117);
+            timeInsert.Location = new Point(967, 111);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
             timeInsert.Size = new Size(106, 40);
             timeInsert.TabIndex = 5;
+            // 
+            // txtContentInsert
+            // 
+            txtContentInsert.Location = new Point(408, 105);
+            txtContentInsert.Multiline = true;
+            txtContentInsert.Name = "txtContentInsert";
+            txtContentInsert.PlaceholderText = "Details";
+            txtContentInsert.Size = new Size(364, 46);
+            txtContentInsert.TabIndex = 6;
+            // 
+            // btnClearData
+            // 
+            btnClearData.BackColor = SystemColors.GradientActiveCaption;
+            btnClearData.Location = new Point(888, 58);
+            btnClearData.Name = "btnClearData";
+            btnClearData.Size = new Size(153, 45);
+            btnClearData.TabIndex = 7;
+            btnClearData.Text = "Clear Data";
+            btnClearData.UseVisualStyleBackColor = false;
+            btnClearData.Click += btnClearData_Click;
             // 
             // ToDoMainForm
             // 
             AutoScaleDimensions = new SizeF(16F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 520);
+            Controls.Add(btnClearData);
+            Controls.Add(txtContentInsert);
             Controls.Add(timeInsert);
             Controls.Add(dateInsert);
-            Controls.Add(txtContentInsert);
             Controls.Add(txtSubjectInsert);
             Controls.Add(label1);
             Controls.Add(btnAddTask);
@@ -159,9 +173,10 @@
         private Button btnAddTask;
         private Label label1;
         private TextBox txtSubjectInsert;
-        private TextBox txtContentInsert;
         private DateTimePicker dateInsert;
         private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
         private DateTimePicker timeInsert;
+        private TextBox txtContentInsert;
+        private Button btnClearData;
     }
 }

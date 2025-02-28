@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace ToDo_WForms_App
@@ -110,11 +112,21 @@ namespace ToDo_WForms_App
 
                 LoadData();
 
-                txtSubjectInsert.Clear();
-                txtContentInsert.Clear();
-                dateInsert.Value = DateTime.Now;
-                timeInsert.Value = DateTime.Now;
+                ClearData();
             }
+        }
+
+        private void ClearData()
+        {
+            txtSubjectInsert.Clear();
+            txtContentInsert.Clear();
+            dateInsert.Value = DateTime.Now;
+            timeInsert.Value = DateTime.Now;
+        }
+
+        private void btnClearData_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
 
         // add edit and delete buttons / columns
@@ -217,6 +229,7 @@ namespace ToDo_WForms_App
                 }
             }
         }
+
 
     }
 }

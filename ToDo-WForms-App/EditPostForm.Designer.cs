@@ -37,6 +37,9 @@
             txtContentEdit = new TextBox();
             dateEdit = new DateTimePicker();
             hourEdit = new DateTimePicker();
+            btnEditAddPost = new Button();
+            btnEditCancel = new Button();
+            btnEditClear = new Button();
             SuspendLayout();
             // 
             // lblEdit
@@ -121,11 +124,43 @@
             hourEdit.Size = new Size(101, 40);
             hourEdit.TabIndex = 5;
             // 
+            // btnEditAddPost
+            // 
+            btnEditAddPost.Location = new Point(143, 326);
+            btnEditAddPost.Name = "btnEditAddPost";
+            btnEditAddPost.Size = new Size(122, 90);
+            btnEditAddPost.TabIndex = 6;
+            btnEditAddPost.Text = "Confirm";
+            btnEditAddPost.UseVisualStyleBackColor = true;
+            // 
+            // btnEditCancel
+            // 
+            btnEditCancel.Location = new Point(303, 330);
+            btnEditCancel.Name = "btnEditCancel";
+            btnEditCancel.Size = new Size(121, 83);
+            btnEditCancel.TabIndex = 6;
+            btnEditCancel.Text = "Cancel";
+            btnEditCancel.UseVisualStyleBackColor = true;
+            btnEditCancel.Click += btnEditCancel_Click;
+            // 
+            // btnEditClear
+            // 
+            btnEditClear.Location = new Point(460, 333);
+            btnEditClear.Name = "btnEditClear";
+            btnEditClear.Size = new Size(124, 83);
+            btnEditClear.TabIndex = 6;
+            btnEditClear.Text = "Clear";
+            btnEditClear.UseVisualStyleBackColor = true;
+            btnEditClear.Click += btnEditClear_Click;
+            // 
             // EditPostForm
             // 
             AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1550, 594);
+            Controls.Add(btnEditClear);
+            Controls.Add(btnEditCancel);
+            Controls.Add(btnEditAddPost);
             Controls.Add(hourEdit);
             Controls.Add(dateEdit);
             Controls.Add(txtContentEdit);
@@ -154,5 +189,8 @@
         private TextBox txtContentEdit;
         private DateTimePicker dateEdit;
         private DateTimePicker hourEdit;
+        private Button btnEditAddPost;
+        private Button btnEditCancel;
+        private Button btnEditClear;
     }
 }

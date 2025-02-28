@@ -12,6 +12,7 @@ namespace ToDo_WForms_App
 {
     public partial class EditPostForm : Form
     {
+        
         public EditPostForm(Post post)
         {
             InitializeComponent();
@@ -19,9 +20,13 @@ namespace ToDo_WForms_App
             dateEdit.CustomFormat = "dd/MM/yyyy";
             hourEdit.Format = DateTimePickerFormat.Custom;
             hourEdit.CustomFormat = "HH:mm";
+            FillOutBoxes(post);
+        }
+
+        private void FillOutBoxes(Post post)
+        {
             txtSubjectEdit.Text = post.Subject;
             txtContentEdit.Text = post.Content;
-            //richTextBox1.Text = post.Content;
             dateEdit.Value = post.DateTodo;
 
 
@@ -37,7 +42,19 @@ namespace ToDo_WForms_App
                 hourEdit.Value = DateTime.Now; // Default value if null
             }
 
+        }
 
+        private void btnEditCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnEditClear_Click(object sender, EventArgs e)
+        {
+            txtSubjectEdit.Clear();
+            txtContentEdit.Clear();
+            dateEdit.Value = DateTime.Now;
+            hourEdit.Value = DateTime.Now;
         }
     }
 }

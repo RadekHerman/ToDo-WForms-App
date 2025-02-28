@@ -18,8 +18,8 @@ namespace ToDo_WForms_App
             InitializeComponent();
             dateEdit.Format = DateTimePickerFormat.Custom;
             dateEdit.CustomFormat = "dd/MM/yyyy";
-            hourEdit.Format = DateTimePickerFormat.Custom;
-            hourEdit.CustomFormat = "HH:mm";
+            timeEdit.Format = DateTimePickerFormat.Custom;
+            timeEdit.CustomFormat = "HH:mm";
             FillOutBoxes(post);
         }
 
@@ -34,12 +34,12 @@ namespace ToDo_WForms_App
             {
                 // Combine the time component with a default date (e.g., today)
                 var timeOnly = post.HourTodo.Value;
-                hourEdit.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
+                timeEdit.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
                                               timeOnly.Hours, timeOnly.Minutes, timeOnly.Seconds);
             }
             else
             {
-                hourEdit.Value = DateTime.Now; // Default value if null
+                timeEdit.Value = DateTime.Now; // Default value if null
             }
 
         }
@@ -54,7 +54,7 @@ namespace ToDo_WForms_App
             txtSubjectEdit.Clear();
             txtContentEdit.Clear();
             dateEdit.Value = DateTime.Now;
-            hourEdit.Value = DateTime.Now;
+            timeEdit.Value = DateTime.Now;
         }
     }
 }

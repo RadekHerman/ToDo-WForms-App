@@ -36,7 +36,7 @@
             txtSubjectEdit = new TextBox();
             txtContentEdit = new TextBox();
             dateEdit = new DateTimePicker();
-            hourEdit = new DateTimePicker();
+            timeEdit = new DateTimePicker();
             btnEditAddPost = new Button();
             btnEditCancel = new Button();
             btnEditClear = new Button();
@@ -115,14 +115,14 @@
             dateEdit.Size = new Size(188, 40);
             dateEdit.TabIndex = 4;
             // 
-            // hourEdit
+            // timeEdit
             // 
-            hourEdit.Format = DateTimePickerFormat.Time;
-            hourEdit.Location = new Point(180, 249);
-            hourEdit.Name = "hourEdit";
-            hourEdit.ShowUpDown = true;
-            hourEdit.Size = new Size(101, 40);
-            hourEdit.TabIndex = 5;
+            timeEdit.Format = DateTimePickerFormat.Time;
+            timeEdit.Location = new Point(180, 249);
+            timeEdit.Name = "timeEdit";
+            timeEdit.ShowUpDown = true;
+            timeEdit.Size = new Size(101, 40);
+            timeEdit.TabIndex = 5;
             // 
             // btnEditAddPost
             // 
@@ -161,7 +161,7 @@
             Controls.Add(btnEditClear);
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditAddPost);
-            Controls.Add(hourEdit);
+            Controls.Add(timeEdit);
             Controls.Add(dateEdit);
             Controls.Add(txtContentEdit);
             Controls.Add(txtSubjectEdit);
@@ -188,7 +188,7 @@
         private TextBox txtSubjectEdit;
         private TextBox txtContentEdit;
         private DateTimePicker dateEdit;
-        private DateTimePicker hourEdit;
+        private DateTimePicker timeEdit;
         private Button btnEditAddPost;
         private Button btnEditCancel;
         private Button btnEditClear;

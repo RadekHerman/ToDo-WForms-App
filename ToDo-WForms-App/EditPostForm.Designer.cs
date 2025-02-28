@@ -28,12 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "EditPostForm";
+            lblEdit = new Label();
+            lblSubjectEdit = new Label();
+            lblDetailsEdit = new Label();
+            lblDateEdit = new Label();
+            lblTimeEdit = new Label();
+            txtSubjectEdit = new TextBox();
+            txtContentEdit = new TextBox();
+            dateEdit = new DateTimePicker();
+            hourEdit = new DateTimePicker();
+            SuspendLayout();
+            // 
+            // lblEdit
+            // 
+            lblEdit.AutoSize = true;
+            lblEdit.Location = new Point(21, 19);
+            lblEdit.Margin = new Padding(4, 0, 4, 0);
+            lblEdit.Name = "lblEdit";
+            lblEdit.Size = new Size(327, 33);
+            lblEdit.TabIndex = 0;
+            lblEdit.Text = "Now you can edit your task!";
+            // 
+            // lblSubjectEdit
+            // 
+            lblSubjectEdit.AutoSize = true;
+            lblSubjectEdit.Location = new Point(21, 90);
+            lblSubjectEdit.Name = "lblSubjectEdit";
+            lblSubjectEdit.Size = new Size(107, 33);
+            lblSubjectEdit.TabIndex = 1;
+            lblSubjectEdit.Text = "Subject:";
+            // 
+            // lblDetailsEdit
+            // 
+            lblDetailsEdit.AllowDrop = true;
+            lblDetailsEdit.AutoSize = true;
+            lblDetailsEdit.Location = new Point(21, 141);
+            lblDetailsEdit.Name = "lblDetailsEdit";
+            lblDetailsEdit.Size = new Size(102, 33);
+            lblDetailsEdit.TabIndex = 1;
+            lblDetailsEdit.Text = "Details:";
+            // 
+            // lblDateEdit
+            // 
+            lblDateEdit.AllowDrop = true;
+            lblDateEdit.AutoSize = true;
+            lblDateEdit.Location = new Point(21, 197);
+            lblDateEdit.Name = "lblDateEdit";
+            lblDateEdit.Size = new Size(150, 33);
+            lblDateEdit.TabIndex = 1;
+            lblDateEdit.Text = "Date To Do:";
+            // 
+            // lblTimeEdit
+            // 
+            lblTimeEdit.AllowDrop = true;
+            lblTimeEdit.AutoSize = true;
+            lblTimeEdit.Location = new Point(21, 256);
+            lblTimeEdit.Name = "lblTimeEdit";
+            lblTimeEdit.Size = new Size(153, 33);
+            lblTimeEdit.TabIndex = 1;
+            lblTimeEdit.Text = "Time To Do:";
+            // 
+            // txtSubjectEdit
+            // 
+            txtSubjectEdit.Location = new Point(134, 87);
+            txtSubjectEdit.Multiline = true;
+            txtSubjectEdit.Name = "txtSubjectEdit";
+            txtSubjectEdit.Size = new Size(438, 40);
+            txtSubjectEdit.TabIndex = 2;
+            // 
+            // txtContentEdit
+            // 
+            txtContentEdit.Location = new Point(134, 138);
+            txtContentEdit.Multiline = true;
+            txtContentEdit.Name = "txtContentEdit";
+            txtContentEdit.Size = new Size(1039, 40);
+            txtContentEdit.TabIndex = 3;
+            // 
+            // dateEdit
+            // 
+            dateEdit.Format = DateTimePickerFormat.Short;
+            dateEdit.Location = new Point(177, 191);
+            dateEdit.Name = "dateEdit";
+            dateEdit.Size = new Size(188, 40);
+            dateEdit.TabIndex = 4;
+            // 
+            // hourEdit
+            // 
+            hourEdit.Format = DateTimePickerFormat.Time;
+            hourEdit.Location = new Point(180, 249);
+            hourEdit.Name = "hourEdit";
+            hourEdit.ShowUpDown = true;
+            hourEdit.Size = new Size(101, 40);
+            hourEdit.TabIndex = 5;
+            // 
+            // EditPostForm
+            // 
+            AutoScaleDimensions = new SizeF(15F, 33F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1550, 594);
+            Controls.Add(hourEdit);
+            Controls.Add(dateEdit);
+            Controls.Add(txtContentEdit);
+            Controls.Add(txtSubjectEdit);
+            Controls.Add(lblTimeEdit);
+            Controls.Add(lblDateEdit);
+            Controls.Add(lblDetailsEdit);
+            Controls.Add(lblSubjectEdit);
+            Controls.Add(lblEdit);
+            Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4);
+            Name = "EditPostForm";
+            Text = "EditPostForm";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblEdit;
+        private Label lblSubjectEdit;
+        private Label lblDetailsEdit;
+        private Label lblDateEdit;
+        private Label lblTimeEdit;
+        private TextBox txtSubjectEdit;
+        private TextBox txtContentEdit;
+        private DateTimePicker dateEdit;
+        private DateTimePicker hourEdit;
     }
 }

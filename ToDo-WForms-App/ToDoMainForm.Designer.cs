@@ -64,7 +64,7 @@
             lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 238);
             lblWelcome.Location = new Point(44, 10);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(76, 21);
+            lblWelcome.Size = new Size(112, 33);
             lblWelcome.TabIndex = 1;
             lblWelcome.Text = "Welcome";
             // 
@@ -86,7 +86,7 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.Location = new Point(137, 69);
             label1.Name = "label1";
-            label1.Size = new Size(490, 19);
+            label1.Size = new Size(745, 26);
             label1.TabIndex = 3;
             label1.Text = "Fill out the boxes and press the \"Add Task\" button to create a new task.";
             // 
@@ -95,7 +95,7 @@
             txtSubjectInsert.Location = new Point(137, 117);
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
-            txtSubjectInsert.Size = new Size(265, 29);
+            txtSubjectInsert.Size = new Size(265, 40);
             txtSubjectInsert.TabIndex = 4;
             // 
             // txtContentInsert
@@ -103,7 +103,7 @@
             txtContentInsert.Location = new Point(408, 117);
             txtContentInsert.Name = "txtContentInsert";
             txtContentInsert.PlaceholderText = "Details";
-            txtContentInsert.Size = new Size(347, 29);
+            txtContentInsert.Size = new Size(347, 40);
             txtContentInsert.TabIndex = 4;
             // 
             // dateInsert
@@ -111,7 +111,7 @@
             dateInsert.Format = DateTimePickerFormat.Short;
             dateInsert.Location = new Point(761, 117);
             dateInsert.Name = "dateInsert";
-            dateInsert.Size = new Size(183, 29);
+            dateInsert.Size = new Size(183, 40);
             dateInsert.TabIndex = 5;
             // 
             // sqliteCommand1
@@ -127,12 +127,12 @@
             timeInsert.Location = new Point(950, 117);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
-            timeInsert.Size = new Size(99, 29);
+            timeInsert.Size = new Size(106, 40);
             timeInsert.TabIndex = 5;
             // 
             // ToDoMainForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(16F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 520);
             Controls.Add(timeInsert);

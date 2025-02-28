@@ -152,7 +152,7 @@
             btnEditRevert.TabIndex = 6;
             btnEditRevert.Text = "Revert";
             btnEditRevert.UseVisualStyleBackColor = true;
-            btnEditRevert.Click += btnEditClear_Click;
+            btnEditRevert.Click += btnEditRevert_Click;
             // 
             // EditPostForm
             // 

@@ -12,7 +12,7 @@ namespace ToDo_WForms_App
 {
     public partial class EditPostForm : Form
     {
-        
+        private readonly Post _post;
         public EditPostForm(Post post)
         {
             InitializeComponent();
@@ -20,7 +20,8 @@ namespace ToDo_WForms_App
             dateEdit.CustomFormat = "dd/MM/yyyy";
             timeEdit.Format = DateTimePickerFormat.Custom;
             timeEdit.CustomFormat = "HH:mm";
-            FillOutBoxes(post);
+            _post = post;
+            FillOutBoxes(_post);
         }
 
         private void FillOutBoxes(Post post)
@@ -49,12 +50,39 @@ namespace ToDo_WForms_App
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void btnEditClear_Click(object sender, EventArgs e)
+        private void btnEditRevert_Click(object sender, EventArgs e)
         {
-            txtSubjectEdit.Clear();
-            txtContentEdit.Clear();
-            dateEdit.Value = DateTime.Now;
-            timeEdit.Value = DateTime.Now;
+            FillOutBoxes(_post);
+        }
+
+        private void btnEditAddPost_Click(object sender, EventArgs e)
+        {
+            string subject = txtSubjectEdit.Text;
+            string content = txtContentEdit.Text;
+            DateTime dateTodo = dateEdit.Value.Date;
+            TimeSpan? hourTodo = timeEdit.Value.TimeOfDay;
+
+            if ((string.IsNullOrWhiteSpace(subject)) || (subject == "Subject"))
+            {
+                MessageBox.Show("Subject is required to add a new task.");
+                return;
+            }
+            using (var context = new ToDoDbContext())
+            {
+                var newPost = new Post
+                {
+                    Subject = subject,
+                    Content = content,
+                    DateTodo = dateTodo,
+                    HourTodo = hourTodo,
+                    //UserId = loggedInUserId,
+                };
+                context.Posts.Add(newPost);
+                context.SaveChanges();
+
+                MessageBox.Show("Post updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }

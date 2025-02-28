@@ -39,7 +39,7 @@
             timeEdit = new DateTimePicker();
             btnEditAddPost = new Button();
             btnEditCancel = new Button();
-            btnEditClear = new Button();
+            btnEditRevert = new Button();
             SuspendLayout();
             // 
             // lblEdit
@@ -132,6 +132,7 @@
             btnEditAddPost.TabIndex = 6;
             btnEditAddPost.Text = "Confirm";
             btnEditAddPost.UseVisualStyleBackColor = true;
+            btnEditAddPost.Click += btnEditAddPost_Click;
             // 
             // btnEditCancel
             // 
@@ -143,22 +144,22 @@
             btnEditCancel.UseVisualStyleBackColor = true;
             btnEditCancel.Click += btnEditCancel_Click;
             // 
-            // btnEditClear
+            // btnEditRevert
             // 
-            btnEditClear.Location = new Point(460, 333);
-            btnEditClear.Name = "btnEditClear";
-            btnEditClear.Size = new Size(124, 83);
-            btnEditClear.TabIndex = 6;
-            btnEditClear.Text = "Clear";
-            btnEditClear.UseVisualStyleBackColor = true;
-            btnEditClear.Click += btnEditClear_Click;
+            btnEditRevert.Location = new Point(460, 333);
+            btnEditRevert.Name = "btnEditRevert";
+            btnEditRevert.Size = new Size(124, 83);
+            btnEditRevert.TabIndex = 6;
+            btnEditRevert.Text = "Revert";
+            btnEditRevert.UseVisualStyleBackColor = true;
+            btnEditRevert.Click += btnEditClear_Click;
             // 
             // EditPostForm
             // 
             AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1550, 594);
-            Controls.Add(btnEditClear);
+            Controls.Add(btnEditRevert);
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditAddPost);
             Controls.Add(timeEdit);
@@ -191,6 +192,6 @@
         private DateTimePicker timeEdit;
         private Button btnEditAddPost;
         private Button btnEditCancel;
-        private Button btnEditClear;
+        private Button btnEditRevert;
     }
 }

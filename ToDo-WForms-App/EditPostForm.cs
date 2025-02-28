@@ -57,6 +57,8 @@ namespace ToDo_WForms_App
 
         private void btnEditAddPost_Click(object sender, EventArgs e)
         {
+            int userId = _post.UserId;
+            int postId = _post.Id;
             string subject = txtSubjectEdit.Text;
             string content = txtContentEdit.Text;
             DateTime dateTodo = dateEdit.Value.Date;
@@ -69,19 +71,21 @@ namespace ToDo_WForms_App
             }
             using (var context = new ToDoDbContext())
             {
-                var newPost = new Post
+                var updatePost = context.Posts.FirstOrDefault(p => p.UserId == userId && p.Id == postId);
+
+                if (updatePost != null) 
                 {
-                    Subject = subject,
-                    Content = content,
-                    DateTodo = dateTodo,
-                    HourTodo = hourTodo,
-                    //UserId = loggedInUserId,
+                    updatePost.Subject = subject;
+                    updatePost.Content = content;
+                    updatePost.DateTodo = dateTodo;
+                    updatePost.HourTodo = hourTodo;
+         
                 };
-                context.Posts.Add(newPost);
                 context.SaveChanges();
 
-                MessageBox.Show("Post updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Post updated successfully!", "Success", MessageBoxButtons.OK);
 
+                this.DialogResult = DialogResult.OK;
             }
         }
     }

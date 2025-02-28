@@ -17,7 +17,7 @@ namespace ToDo_WForms_App
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
             lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your tasks!";
-            MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
+           // MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
             dateInsert.Format = DateTimePickerFormat.Custom;
             dateInsert.CustomFormat = "dd/MM/yyyy";
             timeInsert.Format = DateTimePickerFormat.Custom;
@@ -37,7 +37,6 @@ namespace ToDo_WForms_App
 
             using (var context = new ToDoDbContext())
             {
-                // MessageBox.Show("Database context initialized", "Debug");
                 var posts = context.Posts
                     .Where(p => p.UserId == loggedInUserId)
                     .Select(p => new
@@ -46,22 +45,11 @@ namespace ToDo_WForms_App
                         p.DateCreated,
                         p.Subject,
                         p.Content,
-                        //p.DateTodo,
-                        //p.HourTodo,
                         DateTodo = p.DateTodo.ToString("dd/MM/yyyy"),
                         HourTodo = p.HourTodo.HasValue ? p.HourTodo.Value.ToString(@"hh\:mm") : "",
 
                     })
                     .ToList();
-
-                if (posts.Count == 0)
-                {
-                    // MessageBox.Show("No posts found for the current user.", "Debug");
-                }
-                else
-                {
-                    //MessageBox.Show($"Retrieved {posts.Count} posts for UserId: {loggedInUserId}", "Debug");
-                }
 
                 dataGridView1.DataSource = posts;
                 dataGridView1.Columns["Id"].Visible = false;
@@ -167,13 +155,10 @@ namespace ToDo_WForms_App
                     return;
                 }
 
-                // Open a new form or show a dialog to edit the post
-                using (var editForm = new EditPostForm(post)) // Create and pass the post to the form
+                using (var editForm = new EditPostForm(post)) 
                 {
                     if (editForm.ShowDialog() == DialogResult.OK)
                     {
-                        // Save changes back to the database
-                        context.SaveChanges();
                         LoadData(); // Reload data
                     }
                 }

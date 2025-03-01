@@ -38,7 +38,9 @@
             timeInsert = new DateTimePicker();
             txtContentInsert = new TextBox();
             btnClearData = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -55,17 +57,17 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1048, 288);
+            dataGridView1.Size = new Size(1060, 288);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellClick;
             // 
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
-            lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 238);
+            lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblWelcome.Location = new Point(44, 10);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(112, 33);
+            lblWelcome.Size = new Size(117, 33);
             lblWelcome.TabIndex = 1;
             lblWelcome.Text = "Welcome";
             // 
@@ -73,7 +75,7 @@
             // 
             btnAddTask.BackColor = SystemColors.GradientActiveCaption;
             btnAddTask.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnAddTask.Location = new Point(44, 60);
+            btnAddTask.Location = new Point(3, 6);
             btnAddTask.Name = "btnAddTask";
             btnAddTask.Size = new Size(97, 91);
             btnAddTask.TabIndex = 2;
@@ -84,17 +86,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label1.Location = new Point(147, 60);
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
+            label1.Location = new Point(106, 6);
             label1.Name = "label1";
-            label1.Size = new Size(745, 26);
+            label1.Size = new Size(724, 28);
             label1.TabIndex = 3;
             label1.Text = "Fill out the boxes and press the \"Add Task\" button to create a new task.";
             // 
             // txtSubjectInsert
             // 
             txtSubjectInsert.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            txtSubjectInsert.Location = new Point(147, 105);
+            txtSubjectInsert.Location = new Point(106, 51);
             txtSubjectInsert.Multiline = true;
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
@@ -104,7 +106,7 @@
             // dateInsert
             // 
             dateInsert.Format = DateTimePickerFormat.Short;
-            dateInsert.Location = new Point(797, 111);
+            dateInsert.Location = new Point(756, 51);
             dateInsert.Name = "dateInsert";
             dateInsert.Size = new Size(183, 40);
             dateInsert.TabIndex = 5;
@@ -119,7 +121,7 @@
             // timeInsert
             // 
             timeInsert.Format = DateTimePickerFormat.Time;
-            timeInsert.Location = new Point(986, 111);
+            timeInsert.Location = new Point(945, 51);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
             timeInsert.Size = new Size(106, 40);
@@ -128,7 +130,7 @@
             // txtContentInsert
             // 
             txtContentInsert.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            txtContentInsert.Location = new Point(390, 105);
+            txtContentInsert.Location = new Point(349, 51);
             txtContentInsert.Multiline = true;
             txtContentInsert.Name = "txtContentInsert";
             txtContentInsert.PlaceholderText = "Details";
@@ -140,7 +142,7 @@
             // 
             btnClearData.BackColor = SystemColors.GradientActiveCaption;
             btnClearData.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnClearData.Location = new Point(44, 157);
+            btnClearData.Location = new Point(3, 103);
             btnClearData.Name = "btnClearData";
             btnClearData.Size = new Size(97, 45);
             btnClearData.TabIndex = 7;
@@ -148,18 +150,27 @@
             btnClearData.UseVisualStyleBackColor = false;
             btnClearData.Click += btnClearData_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Window;
+            panel1.Controls.Add(btnAddTask);
+            panel1.Controls.Add(timeInsert);
+            panel1.Controls.Add(txtContentInsert);
+            panel1.Controls.Add(dateInsert);
+            panel1.Controls.Add(btnClearData);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(txtSubjectInsert);
+            panel1.Location = new Point(44, 56);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1060, 158);
+            panel1.TabIndex = 8;
+            // 
             // ToDoMainForm
             // 
             AutoScaleDimensions = new SizeF(16F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 520);
-            Controls.Add(btnClearData);
-            Controls.Add(txtContentInsert);
-            Controls.Add(timeInsert);
-            Controls.Add(dateInsert);
-            Controls.Add(txtSubjectInsert);
-            Controls.Add(label1);
-            Controls.Add(btnAddTask);
+            Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dataGridView1);
             Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
@@ -167,6 +178,8 @@
             Text = "ToDoMainForm";
             Load += ToDoMainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,5 +196,6 @@
         private DateTimePicker timeInsert;
         private TextBox txtContentInsert;
         private Button btnClearData;
+        private Panel panel1;
     }
 }

@@ -36,7 +36,13 @@ namespace ToDo_WForms_App
             this.Hide();
             if (registerForm.ShowDialog() == DialogResult.OK)
             {
+                // clear data in txt boxes
+                this.Controls.Clear(); 
+                this.InitializeComponent(); 
+                this.OnLoad(EventArgs.Empty);
+
                 this.Show();
+                
             }
         }
 

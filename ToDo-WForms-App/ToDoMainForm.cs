@@ -30,11 +30,8 @@ namespace ToDo_WForms_App
             AddEditAndDeleteButtons();
         }
 
-
         private void LoadData()
         {
-            // MessageBox.Show("LoadData method called", "Debug");
-
             using (var context = new ToDoDbContext())
             {
                 var posts = context.Posts
@@ -47,7 +44,6 @@ namespace ToDo_WForms_App
                         p.Content,
                         DateTodo = p.DateTodo.ToString("dd/MM/yyyy"),
                         HourTodo = p.HourTodo.HasValue ? p.HourTodo.Value.ToString(@"hh\:mm") : "",
-
                     })
                     .ToList();
 
@@ -99,7 +95,7 @@ namespace ToDo_WForms_App
                 context.Posts.Add(newPost);
                 context.SaveChanges();
 
-                MessageBox.Show("Post added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Post added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadData();
 

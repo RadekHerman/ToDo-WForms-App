@@ -68,7 +68,7 @@
             lblWelcome.Location = new Point(44, 10);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(117, 33);
-            lblWelcome.TabIndex = 1;
+            lblWelcome.TabIndex = 7;
             lblWelcome.Text = "Welcome";
             // 
             // btnAddTask
@@ -78,7 +78,7 @@
             btnAddTask.Location = new Point(3, 6);
             btnAddTask.Name = "btnAddTask";
             btnAddTask.Size = new Size(97, 91);
-            btnAddTask.TabIndex = 2;
+            btnAddTask.TabIndex = 4;
             btnAddTask.Text = "Add Task";
             btnAddTask.UseVisualStyleBackColor = false;
             btnAddTask.Click += btnAddTask_Click;
@@ -90,7 +90,7 @@
             label1.Location = new Point(106, 6);
             label1.Name = "label1";
             label1.Size = new Size(724, 28);
-            label1.TabIndex = 3;
+            label1.TabIndex = 6;
             label1.Text = "Fill out the boxes and press the \"Add Task\" button to create a new task.";
             // 
             // txtSubjectInsert
@@ -101,7 +101,7 @@
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
             txtSubjectInsert.Size = new Size(237, 46);
-            txtSubjectInsert.TabIndex = 4;
+            txtSubjectInsert.TabIndex = 0;
             // 
             // dateInsert
             // 
@@ -109,7 +109,7 @@
             dateInsert.Location = new Point(756, 51);
             dateInsert.Name = "dateInsert";
             dateInsert.Size = new Size(183, 40);
-            dateInsert.TabIndex = 5;
+            dateInsert.TabIndex = 2;
             // 
             // sqliteCommand1
             // 
@@ -125,7 +125,7 @@
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
             timeInsert.Size = new Size(106, 40);
-            timeInsert.TabIndex = 5;
+            timeInsert.TabIndex = 3;
             // 
             // txtContentInsert
             // 
@@ -136,7 +136,7 @@
             txtContentInsert.PlaceholderText = "Details";
             txtContentInsert.ScrollBars = ScrollBars.Vertical;
             txtContentInsert.Size = new Size(401, 90);
-            txtContentInsert.TabIndex = 6;
+            txtContentInsert.TabIndex = 1;
             // 
             // btnClearData
             // 
@@ -145,7 +145,7 @@
             btnClearData.Location = new Point(3, 103);
             btnClearData.Name = "btnClearData";
             btnClearData.Size = new Size(97, 45);
-            btnClearData.TabIndex = 7;
+            btnClearData.TabIndex = 5;
             btnClearData.Text = "Clear";
             btnClearData.UseVisualStyleBackColor = false;
             btnClearData.Click += btnClearData_Click;

@@ -66,7 +66,7 @@ namespace ToDo_WForms_App
                     }
                     this.DialogResult = DialogResult.OK;
                     this.Close();
-                    MessageBox.Show("Login successful!");
+                    //MessageBox.Show("Login successful!");
                 }
                 else
                 {

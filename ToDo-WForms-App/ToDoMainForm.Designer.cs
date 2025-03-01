@@ -51,11 +51,11 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 168);
+            dataGridView1.Location = new Point(44, 220);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1029, 340);
+            dataGridView1.Size = new Size(1048, 288);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellClick;
             // 
@@ -75,7 +75,7 @@
             btnAddTask.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
             btnAddTask.Location = new Point(44, 60);
             btnAddTask.Name = "btnAddTask";
-            btnAddTask.Size = new Size(87, 91);
+            btnAddTask.Size = new Size(97, 91);
             btnAddTask.TabIndex = 2;
             btnAddTask.Text = "Add Task";
             btnAddTask.UseVisualStyleBackColor = false;
@@ -85,7 +85,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label1.Location = new Point(137, 69);
+            label1.Location = new Point(147, 60);
             label1.Name = "label1";
             label1.Size = new Size(745, 26);
             label1.TabIndex = 3;
@@ -93,16 +93,18 @@
             // 
             // txtSubjectInsert
             // 
-            txtSubjectInsert.Location = new Point(137, 111);
+            txtSubjectInsert.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            txtSubjectInsert.Location = new Point(147, 105);
+            txtSubjectInsert.Multiline = true;
             txtSubjectInsert.Name = "txtSubjectInsert";
             txtSubjectInsert.PlaceholderText = "Subject";
-            txtSubjectInsert.Size = new Size(265, 40);
+            txtSubjectInsert.Size = new Size(237, 46);
             txtSubjectInsert.TabIndex = 4;
             // 
             // dateInsert
             // 
             dateInsert.Format = DateTimePickerFormat.Short;
-            dateInsert.Location = new Point(778, 111);
+            dateInsert.Location = new Point(797, 111);
             dateInsert.Name = "dateInsert";
             dateInsert.Size = new Size(183, 40);
             dateInsert.TabIndex = 5;
@@ -117,7 +119,7 @@
             // timeInsert
             // 
             timeInsert.Format = DateTimePickerFormat.Time;
-            timeInsert.Location = new Point(967, 111);
+            timeInsert.Location = new Point(986, 111);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
             timeInsert.Size = new Size(106, 40);
@@ -125,21 +127,24 @@
             // 
             // txtContentInsert
             // 
-            txtContentInsert.Location = new Point(408, 105);
+            txtContentInsert.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            txtContentInsert.Location = new Point(390, 105);
             txtContentInsert.Multiline = true;
             txtContentInsert.Name = "txtContentInsert";
             txtContentInsert.PlaceholderText = "Details";
-            txtContentInsert.Size = new Size(364, 46);
+            txtContentInsert.ScrollBars = ScrollBars.Vertical;
+            txtContentInsert.Size = new Size(401, 90);
             txtContentInsert.TabIndex = 6;
             // 
             // btnClearData
             // 
             btnClearData.BackColor = SystemColors.GradientActiveCaption;
-            btnClearData.Location = new Point(888, 58);
+            btnClearData.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnClearData.Location = new Point(44, 157);
             btnClearData.Name = "btnClearData";
-            btnClearData.Size = new Size(153, 45);
+            btnClearData.Size = new Size(97, 45);
             btnClearData.TabIndex = 7;
-            btnClearData.Text = "Clear Data";
+            btnClearData.Text = "Clear";
             btnClearData.UseVisualStyleBackColor = false;
             btnClearData.Click += btnClearData_Click;
             // 

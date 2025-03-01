@@ -69,6 +69,9 @@ namespace ToDo_WForms_App
             dataGridView1.Columns["HourTodo"].DefaultCellStyle.Format = @"HH:mm";
             dataGridView1.Columns["DateTodo"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dataGridView1.Columns["Content"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.Columns["DateTodo"].Width = 150;
+            dataGridView1.Columns["HourTodo"].Width = 100;
+
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
@@ -130,6 +133,8 @@ namespace ToDo_WForms_App
                 UseColumnTextForButtonValue = true
             };
             dataGridView1.Columns.Add(editButtonColumn);
+            dataGridView1.Columns["EditButton"].Width = 100;
+            
 
             // Add Delete button column
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
@@ -140,6 +145,7 @@ namespace ToDo_WForms_App
                 UseColumnTextForButtonValue = true
             };
             dataGridView1.Columns.Add(deleteButtonColumn);
+            dataGridView1.Columns["DeleteButton"].Width = 100;
         }
 
         private void EditPost(int postId)

@@ -9,6 +9,8 @@ namespace ToDo_WForms_App
             InitializeComponent();
             txtLogUsername.KeyPress += new KeyPressEventHandler(txt_KeyPress);
             //txtLogPassword.KeyPress += new KeyPressEventHandler(txt_KeyPress);
+            this.KeyPreview = true; // Allows the form to detect key presses before controls
+            this.KeyDown += new KeyEventHandler(Form_KeyDown);
         }
 
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
@@ -21,6 +23,13 @@ namespace ToDo_WForms_App
             }
         }
 
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
         private void btnOpenRegisterForm_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();

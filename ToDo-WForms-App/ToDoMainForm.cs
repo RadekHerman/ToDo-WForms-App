@@ -52,11 +52,11 @@ namespace ToDo_WForms_App
                 FormatDataGridView();
 
                 // reset values
-                dataGridView1.Columns["DateCreated"].HeaderText = "Data utworzenia";
-                dataGridView1.Columns["Subject"].HeaderText = "Temat";
-                dataGridView1.Columns["Content"].HeaderText = "Opis";
-                dataGridView1.Columns["DateTodo"].HeaderText = "Data wydarzenia";
-                dataGridView1.Columns["HourTodo"].HeaderText = "Godzina wydarzenia";
+                dataGridView1.Columns["DateCreated"].HeaderText = "Date Created";
+                dataGridView1.Columns["Subject"].HeaderText = "Task Subject";
+                dataGridView1.Columns["Content"].HeaderText = "Details";
+                dataGridView1.Columns["DateTodo"].HeaderText = "Date To Do";
+                dataGridView1.Columns["HourTodo"].HeaderText = "Hour To Do";
             }
         }
 

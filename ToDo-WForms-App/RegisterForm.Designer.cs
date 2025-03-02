@@ -95,11 +95,12 @@
             // 
             // btnRegister
             // 
+            btnRegister.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.Location = new Point(317, 246);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(136, 47);
             btnRegister.TabIndex = 6;
-            btnRegister.Text = "Register";
+            btnRegister.Text = "Confirm";
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 

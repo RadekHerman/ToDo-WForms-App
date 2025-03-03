@@ -38,6 +38,11 @@
             btnOpenLoginForm = new Button();
             lblHaveAccount = new Label();
             lblRegWelcone = new Label();
+            label1 = new Label();
+            lblPasswordChangeHelper = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // lblRegUsername
@@ -45,34 +50,34 @@
             lblRegUsername.AutoSize = true;
             lblRegUsername.Location = new Point(12, 70);
             lblRegUsername.Name = "lblRegUsername";
-            lblRegUsername.Size = new Size(167, 27);
+            lblRegUsername.Size = new Size(199, 33);
             lblRegUsername.TabIndex = 0;
-            lblRegUsername.Text = "Enter Username";
+            lblRegUsername.Text = "Enter Username:";
             // 
             // lblRegPassword
             // 
             lblRegPassword.AutoSize = true;
             lblRegPassword.Location = new Point(12, 126);
             lblRegPassword.Name = "lblRegPassword";
-            lblRegPassword.Size = new Size(163, 27);
+            lblRegPassword.Size = new Size(196, 33);
             lblRegPassword.TabIndex = 1;
-            lblRegPassword.Text = "Enter Password";
+            lblRegPassword.Text = "Enter Password:";
             // 
             // lblRegConfirmPass
             // 
             lblRegConfirmPass.AutoSize = true;
             lblRegConfirmPass.Location = new Point(12, 189);
             lblRegConfirmPass.Name = "lblRegConfirmPass";
-            lblRegConfirmPass.Size = new Size(190, 27);
+            lblRegConfirmPass.Size = new Size(229, 33);
             lblRegConfirmPass.TabIndex = 2;
-            lblRegConfirmPass.Text = "Confirm Password";
+            lblRegConfirmPass.Text = "Confirm Password:";
             // 
             // txtRegUsername
             // 
             txtRegUsername.Location = new Point(243, 63);
             txtRegUsername.MaxLength = 20;
             txtRegUsername.Name = "txtRegUsername";
-            txtRegUsername.Size = new Size(299, 34);
+            txtRegUsername.Size = new Size(299, 40);
             txtRegUsername.TabIndex = 3;
             // 
             // txtRegPassword
@@ -81,7 +86,7 @@
             txtRegPassword.MaxLength = 20;
             txtRegPassword.Name = "txtRegPassword";
             txtRegPassword.PasswordChar = '*';
-            txtRegPassword.Size = new Size(299, 34);
+            txtRegPassword.Size = new Size(299, 40);
             txtRegPassword.TabIndex = 4;
             // 
             // txtRegConfirmPass
@@ -90,13 +95,13 @@
             txtRegConfirmPass.MaxLength = 20;
             txtRegConfirmPass.Name = "txtRegConfirmPass";
             txtRegConfirmPass.PasswordChar = '*';
-            txtRegConfirmPass.Size = new Size(299, 34);
+            txtRegConfirmPass.Size = new Size(299, 40);
             txtRegConfirmPass.TabIndex = 5;
             // 
             // btnRegister
             // 
             btnRegister.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegister.Location = new Point(317, 246);
+            btnRegister.Location = new Point(317, 421);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(136, 47);
             btnRegister.TabIndex = 6;
@@ -106,7 +111,8 @@
             // 
             // btnOpenLoginForm
             // 
-            btnOpenLoginForm.Location = new Point(317, 321);
+            btnOpenLoginForm.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnOpenLoginForm.Location = new Point(317, 508);
             btnOpenLoginForm.Name = "btnOpenLoginForm";
             btnOpenLoginForm.Size = new Size(136, 44);
             btnOpenLoginForm.TabIndex = 7;
@@ -117,9 +123,10 @@
             // lblHaveAccount
             // 
             lblHaveAccount.AutoSize = true;
-            lblHaveAccount.Location = new Point(12, 295);
+            lblHaveAccount.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblHaveAccount.Location = new Point(12, 514);
             lblHaveAccount.Name = "lblHaveAccount";
-            lblHaveAccount.Size = new Size(243, 27);
+            lblHaveAccount.Size = new Size(279, 33);
             lblHaveAccount.TabIndex = 8;
             lblHaveAccount.Text = "Already Have Account?";
             // 
@@ -129,22 +136,71 @@
             lblRegWelcone.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegWelcone.Location = new Point(118, 9);
             lblRegWelcone.Name = "lblRegWelcone";
-            lblRegWelcone.Size = new Size(292, 31);
+            lblRegWelcone.Size = new Size(335, 36);
             lblRegWelcone.TabIndex = 9;
             lblRegWelcone.Text = "Register To To-Do App!";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 244);
+            label1.Name = "label1";
+            label1.Size = new Size(221, 33);
+            label1.TabIndex = 2;
+            label1.Text = "Confirm Password";
+            // 
+            // lblPasswordChangeHelper
+            // 
+            lblPasswordChangeHelper.Location = new Point(12, 244);
+            lblPasswordChangeHelper.Name = "lblPasswordChangeHelper";
+            lblPasswordChangeHelper.Size = new Size(372, 43);
+            lblPasswordChangeHelper.TabIndex = 2;
+            lblPasswordChangeHelper.Text = "Please name a place in a world:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(243, 182);
+            textBox1.MaxLength = 20;
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(299, 40);
+            textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(243, 290);
+            textBox2.MaxLength = 100;
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(299, 40);
+            textBox2.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(12, 342);
+            label2.Name = "label2";
+            label2.Size = new Size(530, 76);
+            label2.TabIndex = 2;
+            label2.Text = "Remember your answer, it will help you to change your password if you forget it!";
+            // 
             // RegisterForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 26F);
+            AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(636, 398);
+            ClientSize = new Size(583, 580);
             Controls.Add(lblRegWelcone);
             Controls.Add(lblHaveAccount);
             Controls.Add(btnOpenLoginForm);
             Controls.Add(btnRegister);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(txtRegConfirmPass);
             Controls.Add(txtRegPassword);
             Controls.Add(txtRegUsername);
+            Controls.Add(label2);
+            Controls.Add(lblPasswordChangeHelper);
+            Controls.Add(label1);
             Controls.Add(lblRegConfirmPass);
             Controls.Add(lblRegPassword);
             Controls.Add(lblRegUsername);
@@ -168,5 +224,10 @@
         private Button btnOpenLoginForm;
         private Label lblHaveAccount;
         private Label lblRegWelcone;
+        private Label label1;
+        private Label lblPasswordChangeHelper;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label2;
     }
 }

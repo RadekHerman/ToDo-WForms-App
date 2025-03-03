@@ -8,14 +8,6 @@ public class ToDoDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
 
-    // Configure your database connection, e.g., in OnConfiguring or via Dependency Injection
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //    optionsBuilder.UseSqlite("Data Source=todoDatabase.db");
-    //}
-
-    // encrypted version include the SQLCipher
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Load configuration
@@ -23,19 +15,31 @@ public class ToDoDbContext : DbContext
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
 
-        // Retrieve connection string and encryption key from configuration
-        var connectionString = configuration["ConnectionStrings:Database"];
+
+        var rawPath = configuration["ConnectionStrings:Database"];
         var encryptionKey = configuration["DatabaseKey"];
 
-        // Ensure both connection string and encryption key are not null or empty
-        if (string.IsNullOrWhiteSpace(connectionString))
+        // Replace %AppData% with the actual AppData path
+        var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        var databaseFilePath = rawPath.Replace("%AppData%", appDataPath);
+
+        // Ensure the directory exists
+        var databaseDirectory = System.IO.Path.GetDirectoryName(databaseFilePath);
+        if (!string.IsNullOrEmpty(databaseDirectory) && !System.IO.Directory.Exists(databaseDirectory))
         {
-            throw new InvalidOperationException("Connection string is missing or empty in appsettings.json.");
+            try
+            {
+                System.IO.Directory.CreateDirectory(databaseDirectory);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error creating directory: {ex.Message}");
+                throw;
+            }
         }
-        if (string.IsNullOrWhiteSpace(encryptionKey))
-        {
-            throw new InvalidOperationException("Database encryption key is missing or empty in appsettings.json.");
-        }
+
+        // Build the SQLite connection string
+        var connectionString = $"Data Source={databaseFilePath};";
 
         // Create and configure SQLite connection
         var connection = new SqliteConnection(connectionString);

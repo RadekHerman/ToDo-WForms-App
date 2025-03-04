@@ -40,8 +40,7 @@
             lblRegWelcone = new Label();
             label1 = new Label();
             lblPasswordChangeHelper = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtPassHelper = new TextBox();
             label2 = new Label();
             SuspendLayout();
             // 
@@ -157,23 +156,14 @@
             lblPasswordChangeHelper.TabIndex = 2;
             lblPasswordChangeHelper.Text = "Please name a place in a world:";
             // 
-            // textBox1
+            // txtPassHelper
             // 
-            textBox1.Location = new Point(243, 182);
-            textBox1.MaxLength = 20;
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(299, 40);
-            textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(243, 290);
-            textBox2.MaxLength = 100;
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(299, 40);
-            textBox2.TabIndex = 5;
+            txtPassHelper.Location = new Point(243, 290);
+            txtPassHelper.MaxLength = 100;
+            txtPassHelper.Name = "txtPassHelper";
+            txtPassHelper.PasswordChar = '*';
+            txtPassHelper.Size = new Size(299, 40);
+            txtPassHelper.TabIndex = 5;
             // 
             // label2
             // 
@@ -193,8 +183,7 @@
             Controls.Add(lblHaveAccount);
             Controls.Add(btnOpenLoginForm);
             Controls.Add(btnRegister);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassHelper);
             Controls.Add(txtRegConfirmPass);
             Controls.Add(txtRegPassword);
             Controls.Add(txtRegUsername);
@@ -227,7 +216,7 @@
         private Label label1;
         private Label lblPasswordChangeHelper;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtPassHelper;
         private Label label2;
     }
 }

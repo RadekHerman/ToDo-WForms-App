@@ -13,10 +13,9 @@ public class User
     [StringLength(80)]
     public string Password { get; set; }
 
-    //[Required]
-    //[StringLength(120)]
-    //public string Email { get; set; }
-
+    [Required]
+    [StringLength(100)]
+    public string PassChangeHelper { get; set; }
 
     // Navigation property for related posts
     public ICollection<Post> Posts { get; set; } = new List<Post>();

@@ -48,7 +48,8 @@ public class ToDoDbContext : DbContext
         // Set the encryption key
         using (var command = connection.CreateCommand())
         {
-            command.CommandText = $"PRAGMA key = '{encryptionKey}';";
+            // uncomment for ENCRYPTION, for production no encryption <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            //command.CommandText = $"PRAGMA key = '{encryptionKey}';";
             command.ExecuteNonQuery();
         }
 

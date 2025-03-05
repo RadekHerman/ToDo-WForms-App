@@ -28,11 +28,11 @@
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if ((!string.IsNullOrWhiteSpace(txtRegUsername.Text) && (txtRegUsername.Text.Length >= 3)) && (!string.IsNullOrWhiteSpace(txtRegPassword.Text) && txtRegPassword.Text.Length >= 3) && (!string.IsNullOrWhiteSpace(txtRegConfirmPass.Text)))
+            if ((!string.IsNullOrWhiteSpace(txtRegUsername.Text) && (txtRegUsername.Text.Length >= 3)) && (!string.IsNullOrWhiteSpace(txtRegPassword.Text) && txtRegPassword.Text.Length >= 3) && (!string.IsNullOrWhiteSpace(txtRegConfirmPass.Text)) && ((!string.IsNullOrWhiteSpace(txtPassHelper.Text) && txtPassHelper.Text.Length >= 3)))
             {
                 if (txtRegPassword.Text == txtRegConfirmPass.Text)
                 {
-                    if (createUser(txtRegUsername.Text, txtRegPassword.Text))
+                    if (createUser(txtRegUsername.Text, txtRegPassword.Text, txtPassHelper.Text))
                     {
                         MessageBox.Show("Your Account Has Been Created! Please Login!");
                         this.DialogResult = DialogResult.OK;
@@ -50,11 +50,11 @@
             }
             else
             {
-                MessageBox.Show("Please enter valid inputs, minimum 3 charcters!");
+                MessageBox.Show("Please enter valid inputs in all the boxes, minimum 3 charcters!");
             }
         }
 
-        private bool createUser(string username, string password)
+        private bool createUser(string username, string password, string passHelper)
         {
 
             using (var context = new ToDoDbContext())
@@ -63,6 +63,8 @@
                 //bool userExists = users.Any(u => u.Username == username);
                 bool userExists = context.Users.Any(u => u.Username == username);
 
+                passHelper = passHelper.Trim();
+
                 if (userExists) { return false; }
                 else
                 {
@@ -70,14 +72,14 @@
                     var newUser = new User
                     {
                         Username = username,
-                        Password = hashedPassword
+                        Password = hashedPassword,
+                        PassChangeHelper = passHelper
                     };
 
                     context.Users.Add(newUser);
                     context.SaveChanges();
                     return true;
                 }
-
             }
         }
     }

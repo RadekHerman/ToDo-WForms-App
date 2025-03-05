@@ -16,7 +16,7 @@ namespace ToDo_WForms_App
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Check if the character is not a control key, letter, or digit
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
             {
                 // Cancel the input
                 e.Handled = true;
@@ -52,6 +52,10 @@ namespace ToDo_WForms_App
             this.Hide();
             if (passChangeForm.ShowDialog() == DialogResult.OK)
             {
+                // clear data in txt boxes
+                this.Controls.Clear();
+                this.InitializeComponent();
+                this.OnLoad(EventArgs.Empty);
                 this.Show();
             }
         }

@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PassChangeForm";
+            btnPassChangeConfirm = new Button();
+            SuspendLayout();
+            // 
+            // btnPassChangeConfirm
+            // 
+            btnPassChangeConfirm.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnPassChangeConfirm.Location = new Point(196, 242);
+            btnPassChangeConfirm.Margin = new Padding(4, 4, 4, 4);
+            btnPassChangeConfirm.Name = "btnPassChangeConfirm";
+            btnPassChangeConfirm.Size = new Size(107, 32);
+            btnPassChangeConfirm.TabIndex = 0;
+            btnPassChangeConfirm.Text = "Confirm";
+            btnPassChangeConfirm.UseVisualStyleBackColor = true;
+            btnPassChangeConfirm.Click += btnPassChangeConfirm_Click;
+            // 
+            // PassChangeForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(520, 340);
+            Controls.Add(btnPassChangeConfirm);
+            Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "PassChangeForm";
+            Text = "PassChangeForm";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnPassChangeConfirm;
     }
 }

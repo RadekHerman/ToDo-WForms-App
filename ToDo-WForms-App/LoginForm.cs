@@ -37,14 +37,25 @@ namespace ToDo_WForms_App
             if (registerForm.ShowDialog() == DialogResult.OK)
             {
                 // clear data in txt boxes
-                this.Controls.Clear(); 
-                this.InitializeComponent(); 
+                this.Controls.Clear();
+                this.InitializeComponent();
                 this.OnLoad(EventArgs.Empty);
 
                 this.Show();
-                
+
             }
         }
+
+        private void btnForgotPass_Click(object sender, EventArgs e)
+        {
+            PassChangeForm passChangeForm = new PassChangeForm();
+            this.Hide();
+            if (passChangeForm.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+            }
+        }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -78,7 +89,7 @@ namespace ToDo_WForms_App
                 MessageBox.Show("Invalid data! Username and Password are required!");
             }
         }
-       
+
         private bool IsValidUser(string username, string password)
         {
             using (var context = new ToDoDbContext())
@@ -95,6 +106,7 @@ namespace ToDo_WForms_App
                 return PasswordHelper.VerifyPassword(password, hashedPassword);
             }
         }
+
 
     }
 }

@@ -56,7 +56,6 @@
 
         private bool createUser(string username, string password, string passHelper)
         {
-
             using (var context = new ToDoDbContext())
             {
                 //var users = context.Users.ToList();

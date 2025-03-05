@@ -17,5 +17,11 @@ namespace ToDo_WForms_App
             InitializeComponent();
 
         }
+
+        private void btnPassChangeConfirm_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

@@ -35,7 +35,7 @@
             lblPCPassHelper = new Label();
             label5 = new Label();
             txtPCUsername = new TextBox();
-            tztPCPassHelper = new TextBox();
+            txtPCPassHelper = new TextBox();
             txtPCNewPassword = new TextBox();
             txtPCRepeatPassword = new TextBox();
             btnCPCancel = new Button();
@@ -44,10 +44,10 @@
             // btnPassChangeConfirm
             // 
             btnPassChangeConfirm.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnPassChangeConfirm.Location = new Point(305, 313);
+            btnPassChangeConfirm.Location = new Point(196, 256);
             btnPassChangeConfirm.Margin = new Padding(4);
             btnPassChangeConfirm.Name = "btnPassChangeConfirm";
-            btnPassChangeConfirm.Size = new Size(145, 63);
+            btnPassChangeConfirm.Size = new Size(129, 63);
             btnPassChangeConfirm.TabIndex = 0;
             btnPassChangeConfirm.Text = "Confirm";
             btnPassChangeConfirm.UseVisualStyleBackColor = true;
@@ -58,25 +58,25 @@
             lblPCUsername.AutoSize = true;
             lblPCUsername.Location = new Point(31, 87);
             lblPCUsername.Name = "lblPCUsername";
-            lblPCUsername.Size = new Size(138, 33);
+            lblPCUsername.Size = new Size(88, 21);
             lblPCUsername.TabIndex = 1;
             lblPCUsername.Text = "Username:";
             // 
             // lblPCNewPassword
             // 
             lblPCNewPassword.AutoSize = true;
-            lblPCNewPassword.Location = new Point(31, 136);
+            lblPCNewPassword.Location = new Point(31, 133);
             lblPCNewPassword.Name = "lblPCNewPassword";
-            lblPCNewPassword.Size = new Size(191, 33);
+            lblPCNewPassword.Size = new Size(127, 21);
             lblPCNewPassword.TabIndex = 2;
             lblPCNewPassword.Text = "New Password:";
             // 
             // lblPCRepeatPassword
             // 
             lblPCRepeatPassword.AutoSize = true;
-            lblPCRepeatPassword.Location = new Point(31, 188);
+            lblPCRepeatPassword.Location = new Point(31, 174);
             lblPCRepeatPassword.Name = "lblPCRepeatPassword";
-            lblPCRepeatPassword.Size = new Size(216, 33);
+            lblPCRepeatPassword.Size = new Size(145, 21);
             lblPCRepeatPassword.TabIndex = 3;
             lblPCRepeatPassword.Text = "Repeat Password:";
             // 
@@ -84,9 +84,9 @@
             // 
             lblPCPassHelper.AutoSize = true;
             lblPCPassHelper.Font = new Font("Times New Roman", 14.25F, FontStyle.Italic, GraphicsUnit.Point, 238);
-            lblPCPassHelper.Location = new Point(31, 248);
+            lblPCPassHelper.Location = new Point(31, 216);
             lblPCPassHelper.Name = "lblPCPassHelper";
-            lblPCPassHelper.Size = new Size(252, 34);
+            lblPCPassHelper.Size = new Size(164, 21);
             lblPCPassHelper.TabIndex = 4;
             lblPCPassHelper.Text = "A place in the word:";
             // 
@@ -95,48 +95,48 @@
             label5.AutoSize = true;
             label5.Location = new Point(31, 20);
             label5.Name = "label5";
-            label5.Size = new Size(576, 33);
+            label5.Size = new Size(385, 21);
             label5.TabIndex = 5;
             label5.Text = "Please fill out the boxes to change your password.";
             // 
             // txtPCUsername
             // 
-            txtPCUsername.Location = new Point(305, 80);
+            txtPCUsername.Location = new Point(196, 84);
             txtPCUsername.MaxLength = 20;
             txtPCUsername.Name = "txtPCUsername";
-            txtPCUsername.Size = new Size(302, 40);
+            txtPCUsername.Size = new Size(302, 29);
             txtPCUsername.TabIndex = 6;
             // 
-            // tztPCPassHelper
+            // txtPCPassHelper
             // 
-            tztPCPassHelper.Location = new Point(305, 248);
-            tztPCPassHelper.MaxLength = 100;
-            tztPCPassHelper.Name = "tztPCPassHelper";
-            tztPCPassHelper.Size = new Size(302, 40);
-            tztPCPassHelper.TabIndex = 6;
+            txtPCPassHelper.Location = new Point(196, 208);
+            txtPCPassHelper.MaxLength = 100;
+            txtPCPassHelper.Name = "txtPCPassHelper";
+            txtPCPassHelper.Size = new Size(302, 29);
+            txtPCPassHelper.TabIndex = 6;
             // 
             // txtPCNewPassword
             // 
-            txtPCNewPassword.Location = new Point(305, 133);
+            txtPCNewPassword.Location = new Point(196, 125);
             txtPCNewPassword.MaxLength = 20;
             txtPCNewPassword.Name = "txtPCNewPassword";
             txtPCNewPassword.PasswordChar = '*';
-            txtPCNewPassword.Size = new Size(302, 40);
+            txtPCNewPassword.Size = new Size(302, 29);
             txtPCNewPassword.TabIndex = 6;
             // 
             // txtPCRepeatPassword
             // 
-            txtPCRepeatPassword.Location = new Point(305, 188);
+            txtPCRepeatPassword.Location = new Point(196, 166);
             txtPCRepeatPassword.Name = "txtPCRepeatPassword";
             txtPCRepeatPassword.PasswordChar = '*';
-            txtPCRepeatPassword.Size = new Size(302, 40);
+            txtPCRepeatPassword.Size = new Size(302, 29);
             txtPCRepeatPassword.TabIndex = 6;
             // 
             // btnCPCancel
             // 
-            btnCPCancel.Location = new Point(466, 316);
+            btnCPCancel.Location = new Point(369, 257);
             btnCPCancel.Name = "btnCPCancel";
-            btnCPCancel.Size = new Size(141, 57);
+            btnCPCancel.Size = new Size(129, 62);
             btnCPCancel.TabIndex = 7;
             btnCPCancel.Text = "Cancel";
             btnCPCancel.UseVisualStyleBackColor = true;
@@ -144,12 +144,12 @@
             // 
             // PassChangeForm
             // 
-            AutoScaleDimensions = new SizeF(16F, 33F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(694, 389);
+            ClientSize = new Size(525, 344);
             Controls.Add(btnCPCancel);
             Controls.Add(txtPCRepeatPassword);
-            Controls.Add(tztPCPassHelper);
+            Controls.Add(txtPCPassHelper);
             Controls.Add(txtPCNewPassword);
             Controls.Add(txtPCUsername);
             Controls.Add(label5);
@@ -175,7 +175,7 @@
         private Label lblPCPassHelper;
         private Label label5;
         private TextBox txtPCUsername;
-        private TextBox tztPCPassHelper;
+        private TextBox txtPCPassHelper;
         private TextBox txtPCNewPassword;
         private TextBox txtPCRepeatPassword;
         private Button btnCPCancel;

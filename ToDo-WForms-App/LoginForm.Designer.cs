@@ -42,7 +42,7 @@
             // 
             // txtLogUsername
             // 
-            txtLogUsername.Location = new Point(228, 80);
+            txtLogUsername.Location = new Point(149, 79);
             txtLogUsername.Margin = new Padding(4);
             txtLogUsername.MaxLength = 20;
             txtLogUsername.Name = "txtLogUsername";
@@ -51,7 +51,7 @@
             // 
             // txtLogPassword
             // 
-            txtLogPassword.Location = new Point(228, 139);
+            txtLogPassword.Location = new Point(149, 138);
             txtLogPassword.Margin = new Padding(4);
             txtLogPassword.MaxLength = 20;
             txtLogPassword.Name = "txtLogPassword";
@@ -63,7 +63,7 @@
             // 
             btnLogin.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ImageAlign = ContentAlignment.MiddleRight;
-            btnLogin.Location = new Point(292, 187);
+            btnLogin.Location = new Point(203, 175);
             btnLogin.Margin = new Padding(4);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(168, 45);
@@ -74,7 +74,7 @@
             // 
             // btnOpenRegisterForm
             // 
-            btnOpenRegisterForm.Location = new Point(292, 263);
+            btnOpenRegisterForm.Location = new Point(203, 257);
             btnOpenRegisterForm.Margin = new Padding(4);
             btnOpenRegisterForm.Name = "btnOpenRegisterForm";
             btnOpenRegisterForm.Size = new Size(168, 45);
@@ -86,7 +86,7 @@
             // lblLoginUsername
             // 
             lblLoginUsername.AutoSize = true;
-            lblLoginUsername.Location = new Point(29, 87);
+            lblLoginUsername.Location = new Point(13, 87);
             lblLoginUsername.Margin = new Padding(4, 0, 4, 0);
             lblLoginUsername.Name = "lblLoginUsername";
             lblLoginUsername.Size = new Size(128, 21);
@@ -96,7 +96,7 @@
             // lblLoginPassword
             // 
             lblLoginPassword.AutoSize = true;
-            lblLoginPassword.Location = new Point(29, 146);
+            lblLoginPassword.Location = new Point(13, 146);
             lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
             lblLoginPassword.Name = "lblLoginPassword";
             lblLoginPassword.Size = new Size(128, 21);
@@ -106,7 +106,7 @@
             // lblRegister
             // 
             lblRegister.AutoSize = true;
-            lblRegister.Location = new Point(29, 269);
+            lblRegister.Location = new Point(13, 269);
             lblRegister.Name = "lblRegister";
             lblRegister.Size = new Size(176, 21);
             lblRegister.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             lblLoginWelcome.AutoSize = true;
             lblLoginWelcome.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLoginWelcome.Location = new Point(53, 18);
+            lblLoginWelcome.Location = new Point(12, 18);
             lblLoginWelcome.Name = "lblLoginWelcome";
             lblLoginWelcome.Size = new Size(293, 25);
             lblLoginWelcome.TabIndex = 7;
@@ -126,7 +126,7 @@
             // 
             lblForgotPass.AutoSize = true;
             lblForgotPass.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblForgotPass.Location = new Point(29, 325);
+            lblForgotPass.Location = new Point(13, 325);
             lblForgotPass.Name = "lblForgotPass";
             lblForgotPass.Size = new Size(150, 21);
             lblForgotPass.TabIndex = 6;
@@ -135,7 +135,7 @@
             // btnForgotPass
             // 
             btnForgotPass.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnForgotPass.Location = new Point(292, 319);
+            btnForgotPass.Location = new Point(203, 313);
             btnForgotPass.Margin = new Padding(4);
             btnForgotPass.Name = "btnForgotPass";
             btnForgotPass.Size = new Size(168, 45);
@@ -148,7 +148,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(537, 377);
+            ClientSize = new Size(457, 374);
             Controls.Add(lblLoginWelcome);
             Controls.Add(lblForgotPass);
             Controls.Add(lblRegister);

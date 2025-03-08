@@ -39,8 +39,14 @@
             txtContentInsert = new TextBox();
             btnClearData = new Button();
             panel1 = new Panel();
+            menuStripUser = new MenuStrip();
+            userToolStripMenuItem = new ToolStripMenuItem();
+            changeUsernameStripMenu = new ToolStripMenuItem();
+            changePasswordStripMenu = new ToolStripMenuItem();
+            logoutStripMenu = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            menuStripUser.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -53,11 +59,11 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(44, 220);
+            dataGridView1.Location = new Point(44, 272);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1060, 288);
+            dataGridView1.Size = new Size(1060, 236);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellClick;
             // 
@@ -65,7 +71,7 @@
             // 
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            lblWelcome.Location = new Point(44, 10);
+            lblWelcome.Location = new Point(44, 48);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(117, 33);
             lblWelcome.TabIndex = 7;
@@ -160,10 +166,47 @@
             panel1.Controls.Add(btnClearData);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(txtSubjectInsert);
-            panel1.Location = new Point(44, 56);
+            panel1.Location = new Point(44, 96);
             panel1.Name = "panel1";
             panel1.Size = new Size(1060, 158);
             panel1.TabIndex = 8;
+            // 
+            // menuStripUser
+            // 
+            menuStripUser.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menuStripUser.ImageScalingSize = new Size(24, 24);
+            menuStripUser.Items.AddRange(new ToolStripItem[] { userToolStripMenuItem });
+            menuStripUser.Location = new Point(0, 0);
+            menuStripUser.Name = "menuStripUser";
+            menuStripUser.Size = new Size(1165, 32);
+            menuStripUser.TabIndex = 9;
+            menuStripUser.Text = "User";
+            // 
+            // userToolStripMenuItem
+            // 
+            userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { changeUsernameStripMenu, changePasswordStripMenu, logoutStripMenu });
+            userToolStripMenuItem.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userToolStripMenuItem.Name = "userToolStripMenuItem";
+            userToolStripMenuItem.Size = new Size(63, 28);
+            userToolStripMenuItem.Text = "&User";
+            // 
+            // changeUsernameStripMenu
+            // 
+            changeUsernameStripMenu.Name = "changeUsernameStripMenu";
+            changeUsernameStripMenu.Size = new Size(270, 34);
+            changeUsernameStripMenu.Text = "Change Username";
+            // 
+            // changePasswordStripMenu
+            // 
+            changePasswordStripMenu.Name = "changePasswordStripMenu";
+            changePasswordStripMenu.Size = new Size(270, 34);
+            changePasswordStripMenu.Text = "Change Password";
+            // 
+            // logoutStripMenu
+            // 
+            logoutStripMenu.Name = "logoutStripMenu";
+            logoutStripMenu.Size = new Size(270, 34);
+            logoutStripMenu.Text = "Logout";
             // 
             // ToDoMainForm
             // 
@@ -173,13 +216,17 @@
             Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dataGridView1);
+            Controls.Add(menuStripUser);
             Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            MainMenuStrip = menuStripUser;
             Name = "ToDoMainForm";
             Text = "ToDoMainForm";
             Load += ToDoMainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            menuStripUser.ResumeLayout(false);
+            menuStripUser.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,5 +244,10 @@
         private TextBox txtContentInsert;
         private Button btnClearData;
         private Panel panel1;
+        private MenuStrip menuStripUser;
+        private ToolStripMenuItem userToolStripMenuItem;
+        private ToolStripMenuItem changeUsernameStripMenu;
+        private ToolStripMenuItem changePasswordStripMenu;
+        private ToolStripMenuItem logoutStripMenu;
     }
 }

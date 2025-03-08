@@ -1,16 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿
 using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ToDo_WForms_App
 {
@@ -54,14 +43,13 @@ namespace ToDo_WForms_App
                     }
                     else
                     {
-                        MessageBox.Show("Sorry, wrong data! Username or 'a place in the word'.");
+                        MessageBox.Show("Sorry, wrong data! Username or 'a place in the word' are not correct!");
                     }
                 }
                 else
                 {
                     MessageBox.Show("The passwords in the boxes do not match!");
                 }
-  
             }
             else
             {
@@ -77,7 +65,6 @@ namespace ToDo_WForms_App
                     .Where(u => u.Username == username)
                     .Select(u => u.Id)
                     .FirstOrDefault();
-
 
                 passHelper = passHelper.Trim();
 
@@ -101,12 +88,10 @@ namespace ToDo_WForms_App
                             context.SaveChanges();
                             return true;
                         }
-
                         else
                         {
                             return false;
                         }
-
                     }            
                 }
             }

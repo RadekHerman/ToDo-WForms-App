@@ -49,7 +49,7 @@
             lblRegUsername.AutoSize = true;
             lblRegUsername.Location = new Point(12, 70);
             lblRegUsername.Name = "lblRegUsername";
-            lblRegUsername.Size = new Size(132, 21);
+            lblRegUsername.Size = new Size(199, 33);
             lblRegUsername.TabIndex = 0;
             lblRegUsername.Text = "Enter Username:";
             // 
@@ -58,7 +58,7 @@
             lblRegPassword.AutoSize = true;
             lblRegPassword.Location = new Point(12, 126);
             lblRegPassword.Name = "lblRegPassword";
-            lblRegPassword.Size = new Size(132, 21);
+            lblRegPassword.Size = new Size(196, 33);
             lblRegPassword.TabIndex = 1;
             lblRegPassword.Text = "Enter Password:";
             // 
@@ -67,7 +67,7 @@
             lblRegConfirmPass.AutoSize = true;
             lblRegConfirmPass.Location = new Point(12, 189);
             lblRegConfirmPass.Name = "lblRegConfirmPass";
-            lblRegConfirmPass.Size = new Size(155, 21);
+            lblRegConfirmPass.Size = new Size(229, 33);
             lblRegConfirmPass.TabIndex = 2;
             lblRegConfirmPass.Text = "Confirm Password:";
             // 
@@ -76,7 +76,7 @@
             txtRegUsername.Location = new Point(243, 63);
             txtRegUsername.MaxLength = 20;
             txtRegUsername.Name = "txtRegUsername";
-            txtRegUsername.Size = new Size(299, 29);
+            txtRegUsername.Size = new Size(299, 40);
             txtRegUsername.TabIndex = 0;
             // 
             // txtRegPassword
@@ -85,7 +85,7 @@
             txtRegPassword.MaxLength = 20;
             txtRegPassword.Name = "txtRegPassword";
             txtRegPassword.PasswordChar = '*';
-            txtRegPassword.Size = new Size(299, 29);
+            txtRegPassword.Size = new Size(299, 40);
             txtRegPassword.TabIndex = 1;
             // 
             // txtRegConfirmPass
@@ -94,7 +94,7 @@
             txtRegConfirmPass.MaxLength = 20;
             txtRegConfirmPass.Name = "txtRegConfirmPass";
             txtRegConfirmPass.PasswordChar = '*';
-            txtRegConfirmPass.Size = new Size(299, 29);
+            txtRegConfirmPass.Size = new Size(299, 40);
             txtRegConfirmPass.TabIndex = 2;
             // 
             // btnRegister
@@ -125,7 +125,7 @@
             lblHaveAccount.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblHaveAccount.Location = new Point(12, 514);
             lblHaveAccount.Name = "lblHaveAccount";
-            lblHaveAccount.Size = new Size(189, 21);
+            lblHaveAccount.Size = new Size(279, 33);
             lblHaveAccount.TabIndex = 8;
             lblHaveAccount.Text = "Already Have Account?";
             // 
@@ -135,7 +135,7 @@
             lblRegWelcone.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegWelcone.Location = new Point(118, 9);
             lblRegWelcone.Name = "lblRegWelcone";
-            lblRegWelcone.Size = new Size(234, 25);
+            lblRegWelcone.Size = new Size(335, 36);
             lblRegWelcone.TabIndex = 9;
             lblRegWelcone.Text = "Register To To-Do App!";
             // 
@@ -144,7 +144,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 244);
             label1.Name = "label1";
-            label1.Size = new Size(151, 21);
+            label1.Size = new Size(221, 33);
             label1.TabIndex = 2;
             label1.Text = "Confirm Password";
             // 
@@ -161,7 +161,7 @@
             txtPassHelper.Location = new Point(243, 290);
             txtPassHelper.MaxLength = 100;
             txtPassHelper.Name = "txtPassHelper";
-            txtPassHelper.Size = new Size(299, 29);
+            txtPassHelper.Size = new Size(299, 40);
             txtPassHelper.TabIndex = 3;
             // 
             // label2
@@ -175,9 +175,9 @@
             // 
             // RegisterForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(583, 580);
+            ClientSize = new Size(577, 581);
             Controls.Add(lblRegWelcone);
             Controls.Add(lblHaveAccount);
             Controls.Add(btnOpenLoginForm);

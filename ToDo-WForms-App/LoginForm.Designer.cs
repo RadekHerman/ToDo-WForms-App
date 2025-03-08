@@ -42,28 +42,28 @@
             // 
             // txtLogUsername
             // 
-            txtLogUsername.Location = new Point(149, 79);
+            txtLogUsername.Location = new Point(212, 84);
             txtLogUsername.Margin = new Padding(4);
             txtLogUsername.MaxLength = 20;
             txtLogUsername.Name = "txtLogUsername";
-            txtLogUsername.Size = new Size(287, 29);
+            txtLogUsername.Size = new Size(287, 40);
             txtLogUsername.TabIndex = 0;
             // 
             // txtLogPassword
             // 
-            txtLogPassword.Location = new Point(149, 138);
+            txtLogPassword.Location = new Point(212, 132);
             txtLogPassword.Margin = new Padding(4);
             txtLogPassword.MaxLength = 20;
             txtLogPassword.Name = "txtLogPassword";
             txtLogPassword.PasswordChar = '*';
-            txtLogPassword.Size = new Size(287, 29);
+            txtLogPassword.Size = new Size(287, 40);
             txtLogPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
             btnLogin.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ImageAlign = ContentAlignment.MiddleRight;
-            btnLogin.Location = new Point(203, 175);
+            btnLogin.Location = new Point(276, 195);
             btnLogin.Margin = new Padding(4);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(168, 45);
@@ -74,7 +74,7 @@
             // 
             // btnOpenRegisterForm
             // 
-            btnOpenRegisterForm.Location = new Point(203, 257);
+            btnOpenRegisterForm.Location = new Point(276, 257);
             btnOpenRegisterForm.Margin = new Padding(4);
             btnOpenRegisterForm.Name = "btnOpenRegisterForm";
             btnOpenRegisterForm.Size = new Size(168, 45);
@@ -89,7 +89,7 @@
             lblLoginUsername.Location = new Point(13, 87);
             lblLoginUsername.Margin = new Padding(4, 0, 4, 0);
             lblLoginUsername.Name = "lblLoginUsername";
-            lblLoginUsername.Size = new Size(128, 21);
+            lblLoginUsername.Size = new Size(191, 33);
             lblLoginUsername.TabIndex = 4;
             lblLoginUsername.Text = "Enter Username";
             // 
@@ -99,7 +99,7 @@
             lblLoginPassword.Location = new Point(13, 146);
             lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
             lblLoginPassword.Name = "lblLoginPassword";
-            lblLoginPassword.Size = new Size(128, 21);
+            lblLoginPassword.Size = new Size(188, 33);
             lblLoginPassword.TabIndex = 5;
             lblLoginPassword.Text = "Enter Password";
             // 
@@ -108,7 +108,7 @@
             lblRegister.AutoSize = true;
             lblRegister.Location = new Point(13, 269);
             lblRegister.Name = "lblRegister";
-            lblRegister.Size = new Size(176, 21);
+            lblRegister.Size = new Size(256, 33);
             lblRegister.TabIndex = 6;
             lblRegister.Text = "Do Not Have Accout?";
             // 
@@ -118,7 +118,7 @@
             lblLoginWelcome.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLoginWelcome.Location = new Point(12, 18);
             lblLoginWelcome.Name = "lblLoginWelcome";
-            lblLoginWelcome.Size = new Size(293, 25);
+            lblLoginWelcome.Size = new Size(420, 36);
             lblLoginWelcome.TabIndex = 7;
             lblLoginWelcome.Text = "Welcome To Your To-Do App!";
             // 
@@ -128,14 +128,14 @@
             lblForgotPass.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lblForgotPass.Location = new Point(13, 325);
             lblForgotPass.Name = "lblForgotPass";
-            lblForgotPass.Size = new Size(150, 21);
+            lblForgotPass.Size = new Size(221, 33);
             lblForgotPass.TabIndex = 6;
             lblForgotPass.Text = "Forgot Password?";
             // 
             // btnForgotPass
             // 
             btnForgotPass.Font = new Font("Times New Roman", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnForgotPass.Location = new Point(203, 313);
+            btnForgotPass.Location = new Point(276, 313);
             btnForgotPass.Margin = new Padding(4);
             btnForgotPass.Name = "btnForgotPass";
             btnForgotPass.Size = new Size(168, 45);
@@ -146,9 +146,9 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(457, 374);
+            ClientSize = new Size(512, 413);
             Controls.Add(lblLoginWelcome);
             Controls.Add(lblForgotPass);
             Controls.Add(lblRegister);

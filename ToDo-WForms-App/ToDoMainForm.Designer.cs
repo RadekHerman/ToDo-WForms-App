@@ -195,18 +195,21 @@
             changeUsernameStripMenu.Name = "changeUsernameStripMenu";
             changeUsernameStripMenu.Size = new Size(270, 34);
             changeUsernameStripMenu.Text = "Change Username";
+            changeUsernameStripMenu.Click += changeUsernameStripMenu_Click;
             // 
             // changePasswordStripMenu
             // 
             changePasswordStripMenu.Name = "changePasswordStripMenu";
             changePasswordStripMenu.Size = new Size(270, 34);
             changePasswordStripMenu.Text = "Change Password";
+            changePasswordStripMenu.Click += changePasswordStripMenu_Click;
             // 
             // logoutStripMenu
             // 
             logoutStripMenu.Name = "logoutStripMenu";
             logoutStripMenu.Size = new Size(270, 34);
             logoutStripMenu.Text = "Logout";
+            logoutStripMenu.Click += logoutStripMenu_Click;
             // 
             // ToDoMainForm
             // 

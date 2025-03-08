@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using System;
+using System.Diagnostics;
 using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -17,7 +19,7 @@ namespace ToDo_WForms_App
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
             lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your tasks!";
-           // MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
+            // MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
             dateInsert.Format = DateTimePickerFormat.Custom;
             dateInsert.CustomFormat = "dd/MM/yyyy";
             timeInsert.Format = DateTimePickerFormat.Custom;
@@ -130,7 +132,7 @@ namespace ToDo_WForms_App
             };
             dataGridView1.Columns.Add(editButtonColumn);
             dataGridView1.Columns["EditButton"].Width = 100;
-            
+
 
             // Add Delete button column
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
@@ -157,7 +159,7 @@ namespace ToDo_WForms_App
                     return;
                 }
 
-                using (var editForm = new EditPostForm(post)) 
+                using (var editForm = new EditPostForm(post))
                 {
                     if (editForm.ShowDialog() == DialogResult.OK)
                     {
@@ -217,6 +219,33 @@ namespace ToDo_WForms_App
             }
         }
 
+        private void logoutStripMenu_Click(object sender, EventArgs e)
+        {
+            var currentProcess = Process.GetCurrentProcess();
 
+            // Start a new instance of the application
+            Process.Start(currentProcess.MainModule.FileName);
+
+            // Exit the current instance
+            Environment.Exit(0);
+
+        }
+
+        private void changePasswordStripMenu_Click(object sender, EventArgs e)
+        {
+            using (var passwordChangeForm = new PassChangeForm())
+            {
+                passwordChangeForm.ShowDialog();
+            };
+        }
+
+        private void changeUsernameStripMenu_Click(object sender, EventArgs e)
+        {
+            using ( var newUsernameChangeForm = new UsernameChangeForm())
+            {
+                newUsernameChangeForm.ShowDialog();
+                LoadData();
+            }
+        }
     }
 }

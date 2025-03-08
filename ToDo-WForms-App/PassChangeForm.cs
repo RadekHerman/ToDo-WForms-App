@@ -23,6 +23,7 @@ namespace ToDo_WForms_App
 
         private void btnCPCancel_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Operation Canceled.");
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -73,7 +73,7 @@
             lblWelcome.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 238);
             lblWelcome.Location = new Point(44, 48);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(117, 33);
+            lblWelcome.Size = new Size(79, 21);
             lblWelcome.TabIndex = 7;
             lblWelcome.Text = "Welcome";
             // 
@@ -95,7 +95,7 @@
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
             label1.Location = new Point(106, 6);
             label1.Name = "label1";
-            label1.Size = new Size(724, 28);
+            label1.Size = new Size(489, 19);
             label1.TabIndex = 6;
             label1.Text = "Fill out the boxes and press the \"Add Task\" button to create a new task.";
             // 
@@ -114,7 +114,7 @@
             dateInsert.Format = DateTimePickerFormat.Short;
             dateInsert.Location = new Point(756, 51);
             dateInsert.Name = "dateInsert";
-            dateInsert.Size = new Size(183, 40);
+            dateInsert.Size = new Size(183, 29);
             dateInsert.TabIndex = 2;
             // 
             // sqliteCommand1
@@ -130,7 +130,7 @@
             timeInsert.Location = new Point(945, 51);
             timeInsert.Name = "timeInsert";
             timeInsert.ShowUpDown = true;
-            timeInsert.Size = new Size(106, 40);
+            timeInsert.Size = new Size(106, 29);
             timeInsert.TabIndex = 3;
             // 
             // txtContentInsert
@@ -178,7 +178,7 @@
             menuStripUser.Items.AddRange(new ToolStripItem[] { userToolStripMenuItem });
             menuStripUser.Location = new Point(0, 0);
             menuStripUser.Name = "menuStripUser";
-            menuStripUser.Size = new Size(1165, 32);
+            menuStripUser.Size = new Size(1206, 24);
             menuStripUser.TabIndex = 9;
             menuStripUser.Text = "User";
             // 
@@ -187,35 +187,35 @@
             userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { changeUsernameStripMenu, changePasswordStripMenu, logoutStripMenu });
             userToolStripMenuItem.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             userToolStripMenuItem.Name = "userToolStripMenuItem";
-            userToolStripMenuItem.Size = new Size(63, 28);
+            userToolStripMenuItem.Size = new Size(45, 20);
             userToolStripMenuItem.Text = "&User";
             // 
             // changeUsernameStripMenu
             // 
             changeUsernameStripMenu.Name = "changeUsernameStripMenu";
-            changeUsernameStripMenu.Size = new Size(270, 34);
+            changeUsernameStripMenu.Size = new Size(176, 22);
             changeUsernameStripMenu.Text = "Change Username";
             changeUsernameStripMenu.Click += changeUsernameStripMenu_Click;
             // 
             // changePasswordStripMenu
             // 
             changePasswordStripMenu.Name = "changePasswordStripMenu";
-            changePasswordStripMenu.Size = new Size(270, 34);
+            changePasswordStripMenu.Size = new Size(176, 22);
             changePasswordStripMenu.Text = "Change Password";
             changePasswordStripMenu.Click += changePasswordStripMenu_Click;
             // 
             // logoutStripMenu
             // 
             logoutStripMenu.Name = "logoutStripMenu";
-            logoutStripMenu.Size = new Size(270, 34);
+            logoutStripMenu.Size = new Size(176, 22);
             logoutStripMenu.Text = "Logout";
             logoutStripMenu.Click += logoutStripMenu_Click;
             // 
             // ToDoMainForm
             // 
-            AutoScaleDimensions = new SizeF(16F, 33F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1165, 520);
+            ClientSize = new Size(1206, 520);
             Controls.Add(panel1);
             Controls.Add(lblWelcome);
             Controls.Add(dataGridView1);

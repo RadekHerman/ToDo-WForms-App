@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
 public class ToDoDbContext : DbContext
 {
@@ -8,12 +9,34 @@ public class ToDoDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
 
+
+    public static IConfiguration LoadEmbeddedConfiguration()
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        var resourceName = "ToDo_WForms_App.appsettings.json";
+
+        using (var stream = assembly.GetManifestResourceStream(resourceName))
+        using (var reader = new StreamReader(stream))
+        {
+            var json = reader.ReadToEnd();
+
+            // Load the JSON into IConfiguration
+            var configuration = new ConfigurationBuilder()
+                .AddJsonStream(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)))
+                .Build();
+
+            return configuration;
+        }
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Load configuration
-        var configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .Build();
+        //var configuration = new ConfigurationBuilder()
+        //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+        //    .Build();
+
+        // Load configuration file AS Embedded Resource: 
+        var configuration = LoadEmbeddedConfiguration();
 
 
         var rawPath = configuration["ConnectionStrings:Database"];
@@ -49,7 +72,7 @@ public class ToDoDbContext : DbContext
         using (var command = connection.CreateCommand())
         {
             // uncomment for ENCRYPTION, for production no encryption <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-            //command.CommandText = $"PRAGMA key = '{encryptionKey}';";
+            command.CommandText = $"PRAGMA key = '{encryptionKey}';";
             command.ExecuteNonQuery();
         }
 

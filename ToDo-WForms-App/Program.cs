@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Reflection;
+using Microsoft.Extensions.Configuration;
+
 namespace ToDo_WForms_App
 {
     internal static class Program
@@ -6,8 +11,12 @@ namespace ToDo_WForms_App
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
+
+
+
         static void Main()
         {
+
             System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("en-GB");
             System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Globalization.CultureInfo("en-GB");
 

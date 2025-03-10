@@ -1,6 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <SelfContained>true</SelfContained>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>ToDo_WForms_App</RootNamespace>
@@ -9,14 +12,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <!-- Remove 'appsettings.json' from being treated as a normal file -->
   <ItemGroup>
     <None Remove="appsettings.json" />
   </ItemGroup>
 
+  <!-- Embed 'appsettings.json' as a resource -->
   <ItemGroup>
-    <Content Include="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="appsettings.json" />
   </ItemGroup>
 
   <ItemGroup>

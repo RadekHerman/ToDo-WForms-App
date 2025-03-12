@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Diagnostics;
 using System.Drawing.Text;
@@ -236,15 +237,39 @@ namespace ToDo_WForms_App
             using (var passwordChangeForm = new PassChangeForm())
             {
                 passwordChangeForm.ShowDialog();
-            };
+            }
+            
         }
 
         private void changeUsernameStripMenu_Click(object sender, EventArgs e)
         {
-            using ( var newUsernameChangeForm = new UsernameChangeForm())
-            {
+            using (var newUsernameChangeForm = new UsernameChangeForm())
+            {               
                 newUsernameChangeForm.ShowDialog();
-                LoadData();
+
+                UpdateLoggedUsername();
+                lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your tasks!";
+                lblWelcome.Refresh();
+            }
+        }
+
+        private void UpdateLoggedUsername()
+        {
+            using (var context = new ToDoDbContext())
+            {
+                var user = context.Users.FirstOrDefault(u => u.Id == loggedInUserId);
+                UserSession.Username = user.Username;
+                loggedInUsername = UserSession.Username;
+
+            }
+        }
+
+
+        private void changeHelperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using( var newPasswordHelperChangeForm = new PasswordHelperChangeForm())
+            {
+                newPasswordHelperChangeForm.ShowDialog();
             }
         }
     }

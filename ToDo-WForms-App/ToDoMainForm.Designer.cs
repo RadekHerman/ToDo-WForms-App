@@ -45,6 +45,7 @@
             changeUsernameStripMenu = new ToolStripMenuItem();
             changePasswordStripMenu = new ToolStripMenuItem();
             logoutStripMenu = new ToolStripMenuItem();
+            changeHelperToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             menuStripUser.SuspendLayout();
@@ -185,7 +186,7 @@
             // 
             // userToolStripMenuItem
             // 
-            userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { changeUsernameStripMenu, changePasswordStripMenu, logoutStripMenu });
+            userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { changeUsernameStripMenu, changePasswordStripMenu, changeHelperToolStripMenuItem, logoutStripMenu });
             userToolStripMenuItem.Font = new Font("Times New Roman", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             userToolStripMenuItem.Name = "userToolStripMenuItem";
             userToolStripMenuItem.Size = new Size(45, 20);
@@ -194,23 +195,30 @@
             // changeUsernameStripMenu
             // 
             changeUsernameStripMenu.Name = "changeUsernameStripMenu";
-            changeUsernameStripMenu.Size = new Size(176, 22);
+            changeUsernameStripMenu.Size = new Size(216, 22);
             changeUsernameStripMenu.Text = "Change Username";
             changeUsernameStripMenu.Click += changeUsernameStripMenu_Click;
             // 
             // changePasswordStripMenu
             // 
             changePasswordStripMenu.Name = "changePasswordStripMenu";
-            changePasswordStripMenu.Size = new Size(176, 22);
+            changePasswordStripMenu.Size = new Size(216, 22);
             changePasswordStripMenu.Text = "Change Password";
             changePasswordStripMenu.Click += changePasswordStripMenu_Click;
             // 
             // logoutStripMenu
             // 
             logoutStripMenu.Name = "logoutStripMenu";
-            logoutStripMenu.Size = new Size(176, 22);
+            logoutStripMenu.Size = new Size(216, 22);
             logoutStripMenu.Text = "Logout";
             logoutStripMenu.Click += logoutStripMenu_Click;
+            // 
+            // changeHelperToolStripMenuItem
+            // 
+            changeHelperToolStripMenuItem.Name = "changeHelperToolStripMenuItem";
+            changeHelperToolStripMenuItem.Size = new Size(216, 22);
+            changeHelperToolStripMenuItem.Text = "Change Password Helper";
+            changeHelperToolStripMenuItem.Click += changeHelperToolStripMenuItem_Click;
             // 
             // ToDoMainForm
             // 
@@ -254,5 +262,6 @@
         private ToolStripMenuItem changeUsernameStripMenu;
         private ToolStripMenuItem changePasswordStripMenu;
         private ToolStripMenuItem logoutStripMenu;
+        private ToolStripMenuItem changeHelperToolStripMenuItem;
     }
 }

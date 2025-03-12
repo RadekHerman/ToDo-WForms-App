@@ -55,10 +55,17 @@ namespace ToDo_WForms_App
 
                         if (user != null)
                         {
-                            user.Username = newUsername;
-                            context.SaveChanges();
-                            MessageBox.Show("The Username has been changed");
-                            this.Close();
+                            if (PasswordHelper.VerifyPassword(txtNUPassword.Text, user.Password))
+                            {
+                                user.Username = newUsername;
+                                context.SaveChanges();
+                                MessageBox.Show("The Username has been changed");
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Wrong password please try again.");
+                            }
                         }
                         else
                         {

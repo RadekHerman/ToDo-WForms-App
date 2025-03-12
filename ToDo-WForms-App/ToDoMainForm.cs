@@ -120,7 +120,6 @@ namespace ToDo_WForms_App
         }
 
         // add edit and delete buttons / columns
-
         private void AddEditAndDeleteButtons()
         {
             // Add Edit button column
@@ -134,7 +133,6 @@ namespace ToDo_WForms_App
             dataGridView1.Columns.Add(editButtonColumn);
             dataGridView1.Columns["EditButton"].Width = 100;
 
-
             // Add Delete button column
             DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
             {
@@ -146,7 +144,6 @@ namespace ToDo_WForms_App
             dataGridView1.Columns.Add(deleteButtonColumn);
             dataGridView1.Columns["DeleteButton"].Width = 100;
         }
-
         private void EditPost(int postId)
         {
             // Retrieve the post to edit
@@ -260,7 +257,6 @@ namespace ToDo_WForms_App
                 var user = context.Users.FirstOrDefault(u => u.Id == loggedInUserId);
                 UserSession.Username = user.Username;
                 loggedInUsername = UserSession.Username;
-
             }
         }
 

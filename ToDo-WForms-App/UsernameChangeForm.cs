@@ -32,7 +32,7 @@ namespace ToDo_WForms_App
 
         private void btnNUCancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("the Username has not been changed.");
+            //MessageBox.Show("the Username has not been changed.");
             this.DialogResult = DialogResult.OK;
         }
 

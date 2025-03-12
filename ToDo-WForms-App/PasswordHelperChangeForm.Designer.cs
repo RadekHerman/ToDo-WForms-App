@@ -41,18 +41,18 @@
             // 
             // txtCPHNewHelper
             // 
-            txtCPHNewHelper.Location = new Point(293, 103);
+            txtCPHNewHelper.Location = new Point(442, 104);
             txtCPHNewHelper.Margin = new Padding(4);
             txtCPHNewHelper.MaxLength = 100;
             txtCPHNewHelper.Name = "txtCPHNewHelper";
-            txtCPHNewHelper.Size = new Size(245, 40);
+            txtCPHNewHelper.Size = new Size(335, 40);
             txtCPHNewHelper.TabIndex = 0;
             // 
             // lblCPHWelcone1
             // 
             lblCPHWelcone1.AutoEllipsis = true;
             lblCPHWelcone1.AutoSize = true;
-            lblCPHWelcone1.Location = new Point(31, 20);
+            lblCPHWelcone1.Location = new Point(31, 9);
             lblCPHWelcone1.Margin = new Padding(4, 0, 4, 0);
             lblCPHWelcone1.Name = "lblCPHWelcone1";
             lblCPHWelcone1.Size = new Size(458, 33);
@@ -90,7 +90,7 @@
             // 
             lblCPHWelcone2.AutoEllipsis = true;
             lblCPHWelcone2.AutoSize = true;
-            lblCPHWelcone2.Location = new Point(31, 50);
+            lblCPHWelcone2.Location = new Point(31, 52);
             lblCPHWelcone2.Margin = new Padding(4, 0, 4, 0);
             lblCPHWelcone2.Name = "lblCPHWelcone2";
             lblCPHWelcone2.Size = new Size(746, 33);
@@ -99,9 +99,9 @@
             // 
             // btnCPHConfirm
             // 
-            btnCPHConfirm.Location = new Point(312, 198);
+            btnCPHConfirm.Location = new Point(442, 197);
             btnCPHConfirm.Name = "btnCPHConfirm";
-            btnCPHConfirm.Size = new Size(91, 39);
+            btnCPHConfirm.Size = new Size(130, 65);
             btnCPHConfirm.TabIndex = 2;
             btnCPHConfirm.Text = "Confirm";
             btnCPHConfirm.UseVisualStyleBackColor = true;
@@ -109,9 +109,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(425, 198);
+            button2.Location = new Point(647, 197);
             button2.Name = "button2";
-            button2.Size = new Size(91, 39);
+            button2.Size = new Size(130, 65);
             button2.TabIndex = 3;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
@@ -119,19 +119,19 @@
             // 
             // txtCPHPassword
             // 
-            txtCPHPassword.Location = new Point(293, 149);
+            txtCPHPassword.Location = new Point(442, 150);
             txtCPHPassword.Margin = new Padding(4);
             txtCPHPassword.MaxLength = 20;
             txtCPHPassword.Name = "txtCPHPassword";
             txtCPHPassword.PasswordChar = '*';
-            txtCPHPassword.Size = new Size(245, 40);
+            txtCPHPassword.Size = new Size(335, 40);
             txtCPHPassword.TabIndex = 1;
             // 
             // PasswordHelperChangeForm
             // 
             AutoScaleDimensions = new SizeF(16F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 266);
+            ClientSize = new Size(829, 341);
             Controls.Add(button2);
             Controls.Add(btnCPHConfirm);
             Controls.Add(lblCPHPassword);

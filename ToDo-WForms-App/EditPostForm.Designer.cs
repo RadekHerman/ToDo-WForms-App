@@ -49,7 +49,7 @@
             lblEdit.Location = new Point(21, 19);
             lblEdit.Margin = new Padding(4, 0, 4, 0);
             lblEdit.Name = "lblEdit";
-            lblEdit.Size = new Size(222, 21);
+            lblEdit.Size = new Size(327, 33);
             lblEdit.TabIndex = 0;
             lblEdit.Text = "Now you can edit your task!";
             // 
@@ -58,7 +58,7 @@
             lblSubjectEdit.AutoSize = true;
             lblSubjectEdit.Location = new Point(21, 90);
             lblSubjectEdit.Name = "lblSubjectEdit";
-            lblSubjectEdit.Size = new Size(70, 21);
+            lblSubjectEdit.Size = new Size(107, 33);
             lblSubjectEdit.TabIndex = 1;
             lblSubjectEdit.Text = "Subject:";
             // 
@@ -68,7 +68,7 @@
             lblDetailsEdit.AutoSize = true;
             lblDetailsEdit.Location = new Point(21, 141);
             lblDetailsEdit.Name = "lblDetailsEdit";
-            lblDetailsEdit.Size = new Size(64, 21);
+            lblDetailsEdit.Size = new Size(102, 33);
             lblDetailsEdit.TabIndex = 1;
             lblDetailsEdit.Text = "Details:";
             // 
@@ -78,7 +78,7 @@
             lblDateEdit.AutoSize = true;
             lblDateEdit.Location = new Point(21, 197);
             lblDateEdit.Name = "lblDateEdit";
-            lblDateEdit.Size = new Size(102, 21);
+            lblDateEdit.Size = new Size(150, 33);
             lblDateEdit.TabIndex = 1;
             lblDateEdit.Text = "Date To Do:";
             // 
@@ -88,7 +88,7 @@
             lblTimeEdit.AutoSize = true;
             lblTimeEdit.Location = new Point(21, 256);
             lblTimeEdit.Name = "lblTimeEdit";
-            lblTimeEdit.Size = new Size(105, 21);
+            lblTimeEdit.Size = new Size(153, 33);
             lblTimeEdit.TabIndex = 1;
             lblTimeEdit.Text = "Time To Do:";
             // 
@@ -98,7 +98,7 @@
             txtSubjectEdit.Multiline = true;
             txtSubjectEdit.Name = "txtSubjectEdit";
             txtSubjectEdit.Size = new Size(438, 40);
-            txtSubjectEdit.TabIndex = 2;
+            txtSubjectEdit.TabIndex = 0;
             // 
             // txtContentEdit
             // 
@@ -106,15 +106,15 @@
             txtContentEdit.Multiline = true;
             txtContentEdit.Name = "txtContentEdit";
             txtContentEdit.Size = new Size(727, 40);
-            txtContentEdit.TabIndex = 3;
+            txtContentEdit.TabIndex = 1;
             // 
             // dateEdit
             // 
             dateEdit.Format = DateTimePickerFormat.Short;
             dateEdit.Location = new Point(134, 191);
             dateEdit.Name = "dateEdit";
-            dateEdit.Size = new Size(188, 29);
-            dateEdit.TabIndex = 4;
+            dateEdit.Size = new Size(188, 40);
+            dateEdit.TabIndex = 2;
             // 
             // timeEdit
             // 
@@ -122,15 +122,15 @@
             timeEdit.Location = new Point(134, 248);
             timeEdit.Name = "timeEdit";
             timeEdit.ShowUpDown = true;
-            timeEdit.Size = new Size(101, 29);
-            timeEdit.TabIndex = 5;
+            timeEdit.Size = new Size(101, 40);
+            timeEdit.TabIndex = 3;
             // 
             // btnEditAddPost
             // 
             btnEditAddPost.Location = new Point(134, 316);
             btnEditAddPost.Name = "btnEditAddPost";
             btnEditAddPost.Size = new Size(122, 90);
-            btnEditAddPost.TabIndex = 6;
+            btnEditAddPost.TabIndex = 4;
             btnEditAddPost.Text = "Confirm";
             btnEditAddPost.UseVisualStyleBackColor = true;
             btnEditAddPost.Click += btnEditAddPost_Click;
@@ -140,7 +140,7 @@
             btnEditCancel.Location = new Point(288, 316);
             btnEditCancel.Name = "btnEditCancel";
             btnEditCancel.Size = new Size(122, 90);
-            btnEditCancel.TabIndex = 6;
+            btnEditCancel.TabIndex = 5;
             btnEditCancel.Text = "Cancel";
             btnEditCancel.UseVisualStyleBackColor = true;
             btnEditCancel.Click += btnEditCancel_Click;
@@ -157,7 +157,7 @@
             // 
             // EditPostForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(900, 448);
             Controls.Add(btnEditRevert);

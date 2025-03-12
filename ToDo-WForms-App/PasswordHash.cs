@@ -1,6 +1,6 @@
 ﻿namespace ToDo_WForms_App
 {
-    public static class PasswordHelper
+    public static class PasswordHash
     {
         // Hash the password
         public static string HashPassword(string plainPassword)

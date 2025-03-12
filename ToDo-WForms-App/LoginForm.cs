@@ -107,7 +107,7 @@ namespace ToDo_WForms_App
                     return false;
 
                 //return bool
-                return PasswordHelper.VerifyPassword(password, hashedPassword);
+                return PasswordHash.VerifyPassword(password, hashedPassword);
             }
         }
 

@@ -55,7 +55,7 @@ namespace ToDo_WForms_App
 
                         if (user != null)
                         {
-                            if (PasswordHelper.VerifyPassword(txtNUPassword.Text, user.Password))
+                            if (PasswordHash.VerifyPassword(txtNUPassword.Text, user.Password))
                             {
                                 user.Username = newUsername;
                                 context.SaveChanges();

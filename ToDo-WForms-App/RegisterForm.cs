@@ -67,7 +67,7 @@
                 if (userExists) { return false; }
                 else
                 {
-                    string hashedPassword = PasswordHelper.HashPassword(password);
+                    string hashedPassword = PasswordHash.HashPassword(password);
                     var newUser = new User
                     {
                         Username = username,

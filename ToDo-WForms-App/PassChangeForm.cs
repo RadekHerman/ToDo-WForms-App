@@ -80,7 +80,7 @@ namespace ToDo_WForms_App
                     if (passHelper != storedPassHelper) {return false; }
                     else
                     {
-                        var newHashPassword = PasswordHelper.HashPassword(newPassword);
+                        var newHashPassword = PasswordHash.HashPassword(newPassword);
                         var user = context.Users.FirstOrDefault(u => u.Id == userID);
 
                         if (user != null)

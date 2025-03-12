@@ -163,7 +163,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "PassChangeForm";
-            Text = "PassChangeForm";
+            Text = "Your To Do List - Change Password";
             ResumeLayout(false);
             PerformLayout();
         }

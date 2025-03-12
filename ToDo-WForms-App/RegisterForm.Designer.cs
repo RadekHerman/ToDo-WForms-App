@@ -197,7 +197,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "RegisterForm";
-            Text = "Registration";
+            Text = "Your To Do List - Register";
             ResumeLayout(false);
             PerformLayout();
         }

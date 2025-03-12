@@ -176,7 +176,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "EditPostForm";
-            Text = "EditPostForm";
+            Text = "Your To Do List - Task Edit";
             ResumeLayout(false);
             PerformLayout();
         }

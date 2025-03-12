@@ -164,7 +164,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "LoginForm";
-            Text = "Login";
+            Text = "Your To Do List - Login";
             ResumeLayout(false);
             PerformLayout();
         }

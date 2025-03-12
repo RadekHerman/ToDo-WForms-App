@@ -225,7 +225,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStripUser;
             Name = "ToDoMainForm";
-            Text = "ToDoMainForm";
+            Text = "Your To Do List";
             Load += ToDoMainForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);

@@ -130,7 +130,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "UsernameChangeForm";
-            Text = "UsernameChangeForm";
+            Text = "Your To Do List - Change Username";
             ResumeLayout(false);
             PerformLayout();
         }

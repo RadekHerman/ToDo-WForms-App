@@ -45,7 +45,7 @@
             txtCPHNewHelper.Margin = new Padding(4);
             txtCPHNewHelper.MaxLength = 100;
             txtCPHNewHelper.Name = "txtCPHNewHelper";
-            txtCPHNewHelper.Size = new Size(245, 29);
+            txtCPHNewHelper.Size = new Size(245, 40);
             txtCPHNewHelper.TabIndex = 0;
             // 
             // lblCPHWelcone1
@@ -55,9 +55,9 @@
             lblCPHWelcone1.Location = new Point(31, 20);
             lblCPHWelcone1.Margin = new Padding(4, 0, 4, 0);
             lblCPHWelcone1.Name = "lblCPHWelcone1";
-            lblCPHWelcone1.Size = new Size(353, 21);
+            lblCPHWelcone1.Size = new Size(458, 33);
             lblCPHWelcone1.TabIndex = 1;
-            lblCPHWelcone1.Text = "Here, You can change your Password Helper. ";
+            lblCPHWelcone1.Text = "You can change your Password Helper. ";
             // 
             // lblCPHName
             // 
@@ -65,7 +65,7 @@
             lblCPHName.Location = new Point(31, 111);
             lblCPHName.Margin = new Padding(4, 0, 4, 0);
             lblCPHName.Name = "lblCPHName";
-            lblCPHName.Size = new Size(254, 21);
+            lblCPHName.Size = new Size(391, 33);
             lblCPHName.TabIndex = 1;
             lblCPHName.Text = "Name a NEW place in the world:";
             // 
@@ -75,7 +75,7 @@
             lblCPHPassword.Location = new Point(31, 157);
             lblCPHPassword.Margin = new Padding(4, 0, 4, 0);
             lblCPHPassword.Name = "lblCPHPassword";
-            lblCPHPassword.Size = new Size(149, 21);
+            lblCPHPassword.Size = new Size(223, 33);
             lblCPHPassword.TabIndex = 1;
             lblCPHPassword.Text = "Current Password:";
             // 
@@ -93,7 +93,7 @@
             lblCPHWelcone2.Location = new Point(31, 50);
             lblCPHWelcone2.Margin = new Padding(4, 0, 4, 0);
             lblCPHWelcone2.Name = "lblCPHWelcone2";
-            lblCPHWelcone2.Size = new Size(496, 21);
+            lblCPHWelcone2.Size = new Size(746, 33);
             lblCPHWelcone2.TabIndex = 1;
             lblCPHWelcone2.Text = "The phrase that will help you to change your password if needed.";
             // 
@@ -112,7 +112,7 @@
             button2.Location = new Point(425, 198);
             button2.Name = "button2";
             button2.Size = new Size(91, 39);
-            button2.TabIndex = 2;
+            button2.TabIndex = 3;
             button2.Text = "Cancel";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -123,12 +123,13 @@
             txtCPHPassword.Margin = new Padding(4);
             txtCPHPassword.MaxLength = 20;
             txtCPHPassword.Name = "txtCPHPassword";
-            txtCPHPassword.Size = new Size(245, 29);
-            txtCPHPassword.TabIndex = 0;
+            txtCPHPassword.PasswordChar = '*';
+            txtCPHPassword.Size = new Size(245, 40);
+            txtCPHPassword.TabIndex = 1;
             // 
             // PasswordHelperChangeForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(16F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 266);
             Controls.Add(button2);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PassChangeForm));
             btnPassChangeConfirm = new Button();
             lblPCUsername = new Label();
             lblPCNewPassword = new Label();
@@ -159,6 +160,7 @@
             Controls.Add(lblPCUsername);
             Controls.Add(btnPassChangeConfirm);
             Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "PassChangeForm";
             Text = "PassChangeForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPostForm));
             lblEdit = new Label();
             lblSubjectEdit = new Label();
             lblDetailsEdit = new Label();
@@ -48,7 +49,7 @@
             lblEdit.Location = new Point(21, 19);
             lblEdit.Margin = new Padding(4, 0, 4, 0);
             lblEdit.Name = "lblEdit";
-            lblEdit.Size = new Size(327, 33);
+            lblEdit.Size = new Size(222, 21);
             lblEdit.TabIndex = 0;
             lblEdit.Text = "Now you can edit your task!";
             // 
@@ -57,7 +58,7 @@
             lblSubjectEdit.AutoSize = true;
             lblSubjectEdit.Location = new Point(21, 90);
             lblSubjectEdit.Name = "lblSubjectEdit";
-            lblSubjectEdit.Size = new Size(107, 33);
+            lblSubjectEdit.Size = new Size(70, 21);
             lblSubjectEdit.TabIndex = 1;
             lblSubjectEdit.Text = "Subject:";
             // 
@@ -67,7 +68,7 @@
             lblDetailsEdit.AutoSize = true;
             lblDetailsEdit.Location = new Point(21, 141);
             lblDetailsEdit.Name = "lblDetailsEdit";
-            lblDetailsEdit.Size = new Size(102, 33);
+            lblDetailsEdit.Size = new Size(64, 21);
             lblDetailsEdit.TabIndex = 1;
             lblDetailsEdit.Text = "Details:";
             // 
@@ -77,7 +78,7 @@
             lblDateEdit.AutoSize = true;
             lblDateEdit.Location = new Point(21, 197);
             lblDateEdit.Name = "lblDateEdit";
-            lblDateEdit.Size = new Size(150, 33);
+            lblDateEdit.Size = new Size(102, 21);
             lblDateEdit.TabIndex = 1;
             lblDateEdit.Text = "Date To Do:";
             // 
@@ -87,13 +88,13 @@
             lblTimeEdit.AutoSize = true;
             lblTimeEdit.Location = new Point(21, 256);
             lblTimeEdit.Name = "lblTimeEdit";
-            lblTimeEdit.Size = new Size(153, 33);
+            lblTimeEdit.Size = new Size(105, 21);
             lblTimeEdit.TabIndex = 1;
             lblTimeEdit.Text = "Time To Do:";
             // 
             // txtSubjectEdit
             // 
-            txtSubjectEdit.Location = new Point(134, 87);
+            txtSubjectEdit.Location = new Point(134, 71);
             txtSubjectEdit.Multiline = true;
             txtSubjectEdit.Name = "txtSubjectEdit";
             txtSubjectEdit.Size = new Size(438, 40);
@@ -101,32 +102,32 @@
             // 
             // txtContentEdit
             // 
-            txtContentEdit.Location = new Point(134, 138);
+            txtContentEdit.Location = new Point(134, 122);
             txtContentEdit.Multiline = true;
             txtContentEdit.Name = "txtContentEdit";
-            txtContentEdit.Size = new Size(1039, 40);
+            txtContentEdit.Size = new Size(727, 40);
             txtContentEdit.TabIndex = 3;
             // 
             // dateEdit
             // 
             dateEdit.Format = DateTimePickerFormat.Short;
-            dateEdit.Location = new Point(177, 191);
+            dateEdit.Location = new Point(134, 191);
             dateEdit.Name = "dateEdit";
-            dateEdit.Size = new Size(188, 40);
+            dateEdit.Size = new Size(188, 29);
             dateEdit.TabIndex = 4;
             // 
             // timeEdit
             // 
             timeEdit.Format = DateTimePickerFormat.Time;
-            timeEdit.Location = new Point(180, 249);
+            timeEdit.Location = new Point(134, 248);
             timeEdit.Name = "timeEdit";
             timeEdit.ShowUpDown = true;
-            timeEdit.Size = new Size(101, 40);
+            timeEdit.Size = new Size(101, 29);
             timeEdit.TabIndex = 5;
             // 
             // btnEditAddPost
             // 
-            btnEditAddPost.Location = new Point(143, 326);
+            btnEditAddPost.Location = new Point(134, 316);
             btnEditAddPost.Name = "btnEditAddPost";
             btnEditAddPost.Size = new Size(122, 90);
             btnEditAddPost.TabIndex = 6;
@@ -136,9 +137,9 @@
             // 
             // btnEditCancel
             // 
-            btnEditCancel.Location = new Point(303, 330);
+            btnEditCancel.Location = new Point(288, 316);
             btnEditCancel.Name = "btnEditCancel";
-            btnEditCancel.Size = new Size(121, 83);
+            btnEditCancel.Size = new Size(122, 90);
             btnEditCancel.TabIndex = 6;
             btnEditCancel.Text = "Cancel";
             btnEditCancel.UseVisualStyleBackColor = true;
@@ -146,9 +147,9 @@
             // 
             // btnEditRevert
             // 
-            btnEditRevert.Location = new Point(460, 333);
+            btnEditRevert.Location = new Point(450, 316);
             btnEditRevert.Name = "btnEditRevert";
-            btnEditRevert.Size = new Size(124, 83);
+            btnEditRevert.Size = new Size(122, 90);
             btnEditRevert.TabIndex = 6;
             btnEditRevert.Text = "Revert";
             btnEditRevert.UseVisualStyleBackColor = true;
@@ -156,9 +157,9 @@
             // 
             // EditPostForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 33F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1550, 594);
+            ClientSize = new Size(900, 448);
             Controls.Add(btnEditRevert);
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditAddPost);
@@ -172,6 +173,7 @@
             Controls.Add(lblSubjectEdit);
             Controls.Add(lblEdit);
             Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "EditPostForm";
             Text = "EditPostForm";

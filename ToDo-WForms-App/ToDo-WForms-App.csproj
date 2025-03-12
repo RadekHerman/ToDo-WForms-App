@@ -10,6 +10,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageIcon>ToDoIcon_program.jpg</PackageIcon>
   </PropertyGroup>
 
   <!-- Remove 'appsettings.json' from being treated as a normal file -->
@@ -20,6 +21,12 @@
   <!-- Embed 'appsettings.json' as a resource -->
   <ItemGroup>
     <EmbeddedResource Include="appsettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\ikony\ToDoIcon_program.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

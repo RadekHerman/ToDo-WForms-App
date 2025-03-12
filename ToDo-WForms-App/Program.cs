@@ -12,11 +12,8 @@ namespace ToDo_WForms_App
         /// </summary>
         [STAThread]
 
-
-
         static void Main()
         {
-
             System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("en-GB");
             System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Globalization.CultureInfo("en-GB");
 

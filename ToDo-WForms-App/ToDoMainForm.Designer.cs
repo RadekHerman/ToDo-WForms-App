@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoMainForm));
             dataGridView1 = new DataGridView();
             lblWelcome = new Label();
             btnAddTask = new Button();
@@ -221,6 +222,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(menuStripUser);
             Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStripUser;
             Name = "ToDoMainForm";
             Text = "ToDoMainForm";

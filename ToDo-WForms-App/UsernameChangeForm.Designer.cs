@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsernameChangeForm));
             lblNUNewUsername = new Label();
             textBox1 = new TextBox();
             lblNUPassword = new Label();
@@ -44,7 +45,7 @@
             lblNUNewUsername.Location = new Point(32, 67);
             lblNUNewUsername.Margin = new Padding(4, 0, 4, 0);
             lblNUNewUsername.Name = "lblNUNewUsername";
-            lblNUNewUsername.Size = new Size(190, 33);
+            lblNUNewUsername.Size = new Size(127, 21);
             lblNUNewUsername.TabIndex = 0;
             lblNUNewUsername.Text = "New Username:";
             // 
@@ -53,7 +54,7 @@
             textBox1.Location = new Point(948, 239);
             textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 40);
+            textBox1.Size = new Size(223, 29);
             textBox1.TabIndex = 1;
             // 
             // lblNUPassword
@@ -62,7 +63,7 @@
             lblNUPassword.Location = new Point(32, 133);
             lblNUPassword.Margin = new Padding(4, 0, 4, 0);
             lblNUPassword.Name = "lblNUPassword";
-            lblNUPassword.Size = new Size(129, 33);
+            lblNUPassword.Size = new Size(88, 21);
             lblNUPassword.TabIndex = 0;
             lblNUPassword.Text = "Password:";
             // 
@@ -71,7 +72,7 @@
             txtNUNewUsername.Location = new Point(246, 60);
             txtNUNewUsername.MaxLength = 20;
             txtNUNewUsername.Name = "txtNUNewUsername";
-            txtNUNewUsername.Size = new Size(316, 40);
+            txtNUNewUsername.Size = new Size(316, 29);
             txtNUNewUsername.TabIndex = 0;
             // 
             // txtNUPassword
@@ -80,7 +81,7 @@
             txtNUPassword.MaxLength = 20;
             txtNUPassword.Name = "txtNUPassword";
             txtNUPassword.PasswordChar = '*';
-            txtNUPassword.Size = new Size(316, 40);
+            txtNUPassword.Size = new Size(316, 29);
             txtNUPassword.TabIndex = 1;
             // 
             // btnNUConfirm
@@ -108,13 +109,13 @@
             label1.AutoSize = true;
             label1.Location = new Point(32, 9);
             label1.Name = "label1";
-            label1.Size = new Size(537, 33);
+            label1.Size = new Size(365, 21);
             label1.TabIndex = 4;
             label1.Text = "Now you can change your username.na change.";
             // 
             // UsernameChangeForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 33F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(656, 313);
             Controls.Add(label1);
@@ -126,6 +127,7 @@
             Controls.Add(lblNUPassword);
             Controls.Add(lblNUNewUsername);
             Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "UsernameChangeForm";
             Text = "UsernameChangeForm";

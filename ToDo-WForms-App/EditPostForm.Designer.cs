@@ -56,7 +56,7 @@
             // lblSubjectEdit
             // 
             lblSubjectEdit.AutoSize = true;
-            lblSubjectEdit.Location = new Point(21, 90);
+            lblSubjectEdit.Location = new Point(21, 78);
             lblSubjectEdit.Name = "lblSubjectEdit";
             lblSubjectEdit.Size = new Size(107, 33);
             lblSubjectEdit.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             lblDetailsEdit.AllowDrop = true;
             lblDetailsEdit.AutoSize = true;
-            lblDetailsEdit.Location = new Point(21, 141);
+            lblDetailsEdit.Location = new Point(21, 134);
             lblDetailsEdit.Name = "lblDetailsEdit";
             lblDetailsEdit.Size = new Size(102, 33);
             lblDetailsEdit.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             lblDateEdit.AllowDrop = true;
             lblDateEdit.AutoSize = true;
-            lblDateEdit.Location = new Point(21, 197);
+            lblDateEdit.Location = new Point(21, 281);
             lblDateEdit.Name = "lblDateEdit";
             lblDateEdit.Size = new Size(150, 33);
             lblDateEdit.TabIndex = 1;
@@ -86,7 +86,7 @@
             // 
             lblTimeEdit.AllowDrop = true;
             lblTimeEdit.AutoSize = true;
-            lblTimeEdit.Location = new Point(21, 256);
+            lblTimeEdit.Location = new Point(21, 343);
             lblTimeEdit.Name = "lblTimeEdit";
             lblTimeEdit.Size = new Size(153, 33);
             lblTimeEdit.TabIndex = 1;
@@ -94,24 +94,25 @@
             // 
             // txtSubjectEdit
             // 
-            txtSubjectEdit.Location = new Point(134, 71);
+            txtSubjectEdit.Location = new Point(172, 71);
             txtSubjectEdit.Multiline = true;
             txtSubjectEdit.Name = "txtSubjectEdit";
-            txtSubjectEdit.Size = new Size(438, 40);
+            txtSubjectEdit.Size = new Size(748, 40);
             txtSubjectEdit.TabIndex = 0;
             // 
             // txtContentEdit
             // 
-            txtContentEdit.Location = new Point(134, 122);
+            txtContentEdit.Location = new Point(172, 134);
             txtContentEdit.Multiline = true;
             txtContentEdit.Name = "txtContentEdit";
-            txtContentEdit.Size = new Size(727, 40);
+            txtContentEdit.ScrollBars = ScrollBars.Vertical;
+            txtContentEdit.Size = new Size(748, 104);
             txtContentEdit.TabIndex = 1;
             // 
             // dateEdit
             // 
             dateEdit.Format = DateTimePickerFormat.Short;
-            dateEdit.Location = new Point(134, 191);
+            dateEdit.Location = new Point(172, 275);
             dateEdit.Name = "dateEdit";
             dateEdit.Size = new Size(188, 40);
             dateEdit.TabIndex = 2;
@@ -119,7 +120,7 @@
             // timeEdit
             // 
             timeEdit.Format = DateTimePickerFormat.Time;
-            timeEdit.Location = new Point(134, 248);
+            timeEdit.Location = new Point(172, 337);
             timeEdit.Name = "timeEdit";
             timeEdit.ShowUpDown = true;
             timeEdit.Size = new Size(101, 40);
@@ -127,7 +128,7 @@
             // 
             // btnEditAddPost
             // 
-            btnEditAddPost.Location = new Point(134, 316);
+            btnEditAddPost.Location = new Point(440, 286);
             btnEditAddPost.Name = "btnEditAddPost";
             btnEditAddPost.Size = new Size(122, 90);
             btnEditAddPost.TabIndex = 4;
@@ -137,7 +138,7 @@
             // 
             // btnEditCancel
             // 
-            btnEditCancel.Location = new Point(288, 316);
+            btnEditCancel.Location = new Point(620, 287);
             btnEditCancel.Name = "btnEditCancel";
             btnEditCancel.Size = new Size(122, 90);
             btnEditCancel.TabIndex = 5;
@@ -147,7 +148,7 @@
             // 
             // btnEditRevert
             // 
-            btnEditRevert.Location = new Point(450, 316);
+            btnEditRevert.Location = new Point(798, 287);
             btnEditRevert.Name = "btnEditRevert";
             btnEditRevert.Size = new Size(122, 90);
             btnEditRevert.TabIndex = 6;
@@ -159,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(900, 448);
+            ClientSize = new Size(1019, 445);
             Controls.Add(btnEditRevert);
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditAddPost);

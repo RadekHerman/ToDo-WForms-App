@@ -1,4 +1,6 @@
-﻿namespace ToDo_WForms_App
+﻿using ToDo_WForms_App.Utilities;
+
+namespace ToDo_WForms_App
 {
     public partial class RegisterForm : Form
     {

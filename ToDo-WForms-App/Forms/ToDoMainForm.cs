@@ -1,11 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Diagnostics;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
+using ToDo_WForms_App.Models;
 
 namespace ToDo_WForms_App
 {
@@ -20,7 +14,6 @@ namespace ToDo_WForms_App
             loggedInUserId = UserSession.UserId;
             loggedInUsername = UserSession.Username;
             lblWelcome.Text = $"Hello, {loggedInUsername}! Welcome to your TO DO LIST! Now you can create, edit and delete your tasks!";
-            // MessageBox.Show($"user ID {loggedInUserId}, user name: {loggedInUsername}");
             dateInsert.Format = DateTimePickerFormat.Custom;
             dateInsert.CustomFormat = "dd/MM/yyyy";
             timeInsert.Format = DateTimePickerFormat.Custom;
@@ -97,8 +90,6 @@ namespace ToDo_WForms_App
                 };
                 context.Posts.Add(newPost);
                 context.SaveChanges();
-
-                //MessageBox.Show("Post added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadData();
 

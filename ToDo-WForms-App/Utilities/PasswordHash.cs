@@ -1,4 +1,4 @@
-﻿namespace ToDo_WForms_App
+﻿namespace ToDo_WForms_App.Utilities
 {
     public static class PasswordHash
     {
